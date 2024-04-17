@@ -1,0 +1,294 @@
+@nsobid-68202F1AE35348E476523EA2F6E36AA4
+# Splatoon 2: Splatfest World Premiere 1.0.1
+
+@flag offset_shift 0x100
+
+//
+// Licensed under GPLv3, see the included LICENSE.txt or visit
+// https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
+//
+//      Do not use these patches in an online environment.
+//      Even for older versions of the game it's likely you'll be flagged and banned.
+//      These patches are solely intended for isolated emuMMC.
+//      Consider this your warning!
+//
+// Special thanks to everyone who has contributed patches to this file.
+//
+
+// .text:0000000000098FCC _ZN3Cmn3Def12isDevelopSeqEv
+// .text:0000000000098FCC ; __unwind {
+// .text:0000000000098FCC                 MOV             W0, #1  ; Keypatch modified this from:
+// .text:0000000000098FCC                                         ;   MOV W0, WZR
+// .text:0000000000098FD0                 RET
+// .text:0000000000098FD0 ; } // starts at 98FCC
+//
+// Cmn::Def::isDevelopSeq() was dummied out. It seems that it would have
+// called Game::Utl::Limit::isDevelopSeq(), which checks GameConfigSetting
+// for "CorrectSeq" being set to 2. This option would put the game into
+// "development mode", launching DbgSetting on boot.
+// 
+// Cmn::Def::isDevelopSeq() always returns true [OatmealDome]
+@enabled
+000807d8 20008052
+
+// .text:00000000001A4384 _ZN4Cstm8newSceneIN12TitleForShow5SceneEEEPN2Lp3Sys5SceneEiPN4sead4HeapE
+// .text:00000000001A4384 ; __unwind {
+// .text:00000000001A43B4                 MOV             W0, #0x1000 ; unsigned __int64
+// .text:00000000001A43B4                                         ; Keypatch modified this from:
+// .text:00000000001A43B4                                         ;   MOV W0, #0x390
+//
+// .text:00000000001A43C4                 BL              _ZN10DbgSetting5SceneC2EPN4sead4HeapE ; Keypatch modified this from:
+// .text:00000000001A43C4                                         ;   BL _ZN12TitleForShow5SceneC2EPN4sead4HeapE
+// .text:00000000001A43D4 ; } // starts at 162054
+//
+// Since DbgSetting doesn't have its own newScene function, TitleForShow's
+// newScene function is overwritten to load DbgSetting.
+//
+// Construct DbgSetting scene in Cstm::newScene<TitleForShow::Scene>(sead::Heap*) [OatmealDome]
+@enabled
+001A43B4 00008252
+001A43C4 C9F72594
+
+// text:00000000001A43D8 ; Lp::Sys::Scene * Cstm::newScene<ThanksForShow::Scene>(int, sead::Heap *)
+// .text:00000000001A43D8 ; __unwind {
+// .text:00000000001A4408                 MOV             W0, #0x1000 ; unsigned __int64
+// .text:00000000001A4408                                         ; Keypatch modified this from:
+// .text:00000000001A4408                                         ;   MOV W0, #0x3E0
+//
+// .text:00000000001A4418                 BL              _ZN10DummyMatch5SceneC2EPN4sead4HeapE ; Keypatch modified this from:
+// .text:00000000001A4418                                         ;   BL _ZN13ThanksForShow5SceneC2EPN4sead4HeapE
+// .text:00000000001A4428 ; } // starts at 1A43D8
+// .text:00000000001A4428 ; End of function Cstm::newScene<ThanksForShow::Scene>(int,sead::Heap *)
+//
+// Since DummyMatch doesn't have its own newScene function, ThanksForShow's
+// newScene function is overwritten to load DummyMatch.
+//
+// Construct DummyMatch scene in Cstm::newScene<ThanksForShow::Scene>(sead::Heap*) [OatmealDome]
+@enabled
+001A4408 00008252
+001A4418 E71D2694
+
+
+// .text:0000000000FE5820 _ZN2Lp3Sys15cpAssertProductEi
+// .text:0000000000FE5820 ; __unwind {
+// .text:0000000000FE5820                 RET                     ; Keypatch modified this from:
+// .text:0000000000FE5820                                         ;   MOV W8, W0
+// .text:0000000000FE5824 ; } // starts at FE5820
+//
+// This function is called when development mode is enabled during boot.
+// It halts the program in retail builds, so it needs to be dummied out.
+//
+// Dummy out Lp::Sys::cpAssertProduct() [OatmealDome]
+@enabled
+01236908 c0035fd6
+
+//
+// DbgSetting uses debug text drawing functions. These are dummied out
+// in the retail game, but some functions for retail are stiil left.
+// We can redirect the debug functions to the retail functions and text
+// drawing will be restored.
+//
+// Redirect debug text drawing functions to retail functions [OatmealDome]
+@enabled
+0124A930 2C000014
+0124A934 E5000014
+0124A958 2E010014
+0124A95C 6B010014
+0124A960 24020014
+0124A984 6D020014
+0124A988 16000014
+0124A98C CF000014
+0124A9B0 18010014
+0124A9B4 55010014
+0124A9B8 0E020014
+0124A9DC 57020014
+0124B780 04000014
+0124B784 E8000014
+0124B788 02000014
+0124B78C E6000014
+
+//
+// See above description - this is a continuation of the above patch.
+// Changes more text drawing functions to call retail functions.
+//
+// Redirect pilot text drawing functions to retail functions [OatmealDome]
+@enabled
+013106D0 C0035FD6
+01310744 C0035FD6
+013107B8 C0035FD6
+01310840 C0035FD6
+013108B4 C0035FD6
+01310928 C0035FD6
+01310960 C0035FD6
+0131092C 4F61746D
+01310930 65616C20
+01310934 3C332053
+01310938 696D6F6E
+0131093C 53686F75
+01310940 746F7574
+01310944 7320746F
+01310948 00000000
+0131094C 4D617374
+01310950 65724630
+01310954 78000000
+
+// .text:00000000010A4BB4 _ZN2Lp3Utl5Limit24getSceneDbgMixCtrl_PilotEv
+// .text:00000000010A4BB4 ; __unwind {
+// .text:00000000010A4BB4                 MOV             X0, XZR ; Keypatch modified this from:
+// .text:00000000010A4BB4                                         ;   SUB SP, SP, #0x10
+// .text:00000000010A4BB8                 B               _ZN2Lp3Utl7getCtrlEi ; Keypatch modified this from:
+// .text:00000000010A4BB8                                         ;   ADRP X8, #off_2B6E418@PAGE
+// .text:00000000010A4C28 ; } // starts at 10A4BB4
+//
+// Instead of reading from the debug control mix, read from the standard
+// release controllers.
+//
+// Redirect Lp::Utl::Limit::getSceneDbgMixCtrl_Pilot() to Lp::Utl::getCtrl() [OatmealDome]
+@enabled
+012F2874 E0031FAA
+012F2878 1BFFFF17
+
+// .text:0000000000B2BBB4 _ZN10DummyMatch5SceneC2EPN4sead4HeapE
+// .text:0000000000B2BBB4 ; __unwind {
+// .text:0000000000B2BF48                 NOP                     ; Keypatch modified this from:
+// .text:0000000000B2BF48                                         ;   B loc_B2BF50
+//
+// .text:0000000000B2BF4C loc_987DFC                              ; CODE XREF: DummyMatch::Scene::Scene(sead::Heap *)+38C↑j
+// .text:0000000000B2BF4C                 MOV             W8, #1  ; Keypatch modified this from:
+// .text:0000000000B2BF4C                                         ;   MOV W8, WZR
+// .text:0000000000B2BF68 ; } // starts at B2BBB4
+//
+// Use LAN mode for DummyMatch - the servers are down anyway, and we wouldn't
+// want to risk anyone getting banned even if they were still up.
+//
+// Force ChangeLanMatchInBoot to always be true [OatmealDome]
+@enabled
+00B2BF48 1F2003D5
+00B2BF4C 28008052
+
+//
+// Patches the relocation data for "Sample/Actor". This replaces it
+// with the function address for Cstm::newScene<TitleForShow::Scene>(),
+// then places it after "DbgSetting" in the scene table.
+//
+// Add newScene function for DbgSetting [OatmealDome]
+@enabled
+014A03E0 9048df02
+014A03F0 84431a00
+
+//
+// Patches the relocation data for "Sample/Actor"'s scene flags. This
+// replaces it with the function address for Cstm::newScene<Game::CmnScene>(),
+// then places it after "FreeTest" in the scene table.
+//
+// Add newScene function for FreeTest [OatmealDome]
+@enabled
+014A03F8 3846df02
+014A0408 38411a00
+
+//
+// Patches the relocation data for "Sample/ResLoad"'s scene flags. This replaces
+// it with the function address for Cstm::newScene<ThanksForShow::Scene>(),
+// then places it after "DummyMatch" in the scene table.
+//
+// Add newScene function for DummyMatch [OatmealDome]
+@enabled
+014A0410 5049DF02
+014A0420 D8431A00
+
+//
+// This patch translates the debug menu into English (mostly). Translations
+// were done by OatmealDome. If you don't want this, change "@enabled" to
+// "@disabled" or turn it off manually in the IPSwitch menu.
+//
+//
+// DbgSetting English Translation [OatmealDome]
+@enabled
+028C978C "Other"
+028C9796 "Msn (Insp.)"
+028C97AB "VS (Insp.)"
+028C97B7 "Mission (Test)"
+028C97CC "VS (Test)"
+028C97D8 "Misc."
+028C97E2 "Main"
+028C97EC "Sub"
+028C97F3 "Special"
+028C9803 "Hed"
+028C980D "Clt"
+028C9811 "Shs"
+028C9815 "Gear Abilities"
+028C9825 "Player"
+028C9ACC "[+] Load map     [-] FreeTest\n[X] Change mode  [B] Hold for help"
+028C9B3A "[+]'s Mode\n"
+028C9B51 "< Map's mode >"
+028C9B65 "< Recon >"
+028C9BC8 "Gender"
+028C9BCF "Hed"
+028C9BD3 "Legwear"
+028C9BDD "Team"
+028C9BF1 "Splatfest"
+028C9BFB "Camera (X)"
+028C9C0D "Camera (Y)"
+028C9C1F "Sqd. Girl"
+028C9C29 "Squid Boy"
+028C9C33 "Random"
+028C9C40 "Unspecif."
+028C9C53 "Bravo"
+028C9C59 "No Fest"
+028C9C63 "Announced"
+028C9C70 "In Prog."
+028C9C7A "Results Pend."
+028C9C93 "Env"
+028C9C9A "Gamemode"
+028C9CAA "VS Type"
+028C9CBA "Spectator0"
+028C9CC5 "Spectator1"
+028C9CD0 "Color (Comm.)"
+028C9CE2 "30 sec"
+028C9CEC "1 min"
+028C9CF3 "2 mins"
+028C9CFA "3 mins"
+028C9D01 "5 mins"
+028C9D08 "10 mins"
+028C9D12 "99 mins"
+028C9D1C "Not Forced"
+028C9D2C "Day"
+028C9D30 "Aft"
+028C9D37 "Eve"
+028C9D3B "Turf War"
+028C9D48 "Splat Zones"
+028C9D58 "Tower Control"
+028C9D7B "Auto"
+028C9D82 "Private"
+028C9D95 "League"
+028C9D9F "None"
+0287A6F3 "Time"
+028C0DF2 "Rainmaker"
+028A3EE4 "Skin"
+028A3EFA "Eye"
+028ADF70 "Rival"
+028A9BF5 "Normal"
+02863261 "Mission"
+0285C3C0 "Scene"
+0286ED4E "Settings"
+02861FFB "Ink Tank"
+028CA0EB "Starting local communication..."
+028CA119 "Searching for a room..."
+028CA135 "(Press Y to create a room.)"
+028CA163 "Creating a room..."
+028CA18B "Joining the found room..."
+028CA1B0 "Waiting for players..."
+028CA1D2 "%d player(s) connected"
+028CA1E9 "Press Y to start."
+028CA1FF "Please wait for all players to join."
+028CA227 "Syncing!"
+028CA231 "Loading next scene..."
+028CA2B8 "Press the A button (host first)."
+028CA2F5 "%ds left"
+028CA301 "Preparing..."
+028CA311 "Connected to the Internet!"
+028CA33F "Preparing for matchmaking..."
+
+// Seeker Fix
+@enabled
+00235DD0 01000014 

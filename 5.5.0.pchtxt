@@ -1,0 +1,28 @@
+@nsobid-26D72E09076C3B11F53CC37E86960692
+# Splatoon 2 5.5.0
+
+@flag offset_shift 0x100
+
+//
+// Licensed under GPLv3, see the included LICENSE.txt or visit
+// https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
+//
+//      Do not use these patches in an online environment.
+//      Even for older versions of the game it's likely you'll be flagged and banned.
+//      These patches are solely intended for isolated emuMMC.
+//      Consider this your warning!
+//
+// Special thanks to everyone who has contributed patches to this file.
+//
+
+// Daredevil Mode [Diam]
+@disabled
+000E6060 00008052 // set Cmn::Def::Mission::useDeviledArmor to 0 to disable slowdown and damage border
+000E608C 00008052 //set Cmn::Def::Mission::isRecoverArmorLevelZero to 0 to disable armor trying to go back to level 1
+000E6058 00008052 // set  Cmn::Def::Mission::getArmorInitialLevel to 0 to start with no armor
+000E6050 00008052 //set Cmn::Def::Mission::getArmorLevelMax to 0 to disallow gaining armor
+00EF4078 E8030032 // set starting lives in Game::SeqMgrMission::load to 1 to start with 1 life
+00EF4A74 1F2003D5 //NOP life addition in Game::SeqMgrMission::receiveCheckPoint_ to stop the player from gaining lives
+000946F4 2F0080D2
+00094750 2F0000B9 // force RespawnNum to 1 in Cmn::Octa2DMapInfo::create to force OE lives to 1
+00C5B664 1F2003D5 //NOP armor level check in Game::DamageSuddenDeathObjOcta::firstCalc_

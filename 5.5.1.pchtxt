@@ -1,5 +1,5 @@
-@nsobid-F1D66E4030912F7641E84AB1B61F3F76
-# Splatoon 2 3.0.0
+@nsobid-03DCAD95E1AC643072F3A684F6740C85
+# Splatoon 2 5.5.1
 
 @flag offset_shift 0x100
 
@@ -15,7 +15,10 @@
 // Special thanks to everyone who has contributed patches to this file.
 //
 
-// Octo Expansion Unlock [Shadow]
+// Disable Auto Cam Movement [YoshiCrystal]
+@disabled
+010403D0 1F2003D5
+
+// Start Game on Timeout [YoshiCrystal]
 @enabled
-00098F70 20008052
-00024CF8 20008052
+0036E304 21028052

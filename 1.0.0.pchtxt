@@ -1,5 +1,5 @@
-@nsobid-F1D66E4030912F7641E84AB1B61F3F76
-# Splatoon 2 3.0.0
+@nsobid-F18FF3CFCBAD0884D72ABBEB6C540D6B
+# Splatoon 2 1.0.0
 
 @flag offset_shift 0x100
 
@@ -15,7 +15,9 @@
 // Special thanks to everyone who has contributed patches to this file.
 //
 
-// Octo Expansion Unlock [Shadow]
-@enabled
-00098F70 20008052
-00024CF8 20008052
+// Debug function to set save to fully unlocked
+// Do not keep enabled! Only needs to be enabled once to set the save
+// FullOpen [ashbinary]
+@disabled
+001A066C 1C000014
+001263A0 1F000014
