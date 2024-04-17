@@ -19,6 +19,6 @@
 @disabled
 010403D0 1F2003D5
 
-// Start Game on Timeout [YoshiCrystal]
+// Start Game on Timeout [asasasa]
 @enabled
 0036E304 21028052
