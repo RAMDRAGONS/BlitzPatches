@@ -1,0 +1,225 @@
+@nsobid-D3C62FCA532DB43263FC4D864DDD1E2C
+#Splatoon 2 5.1.0
+
+@flag offset_shift 0x100
+
+// One Player Private Battles [Oat]
+@enabled
+0035ED0C 1F2003D51F2003D50900
+0035ED17 14
+003660B4 1F2003D51F2003D50900
+003660BF 14
+014AD450 21008052 
+014CB27C 21008052
+014CA738 1F2003D5
+
+// Fly [kgg]
+@disabled
+00FF8620 C0035FD6
+
+// Jump Height Modifier [Haxxie]
+@enabled
+024A6BD8 CDCC5C40
+
+// Automatic Ultra Rapidfire Bombs [Haxxie]
+@enabled
+00FDDDB4 78000014
+010AC4EC 11000014
+010AC530 20008052
+0108A50C 29000014
+
+// Swim Everywhere [Haxxie]
+@enabled
+01116408 13000014
+010149DC 20008052
+
+// Map Force [Zewia]
+@enabled
+014CA5A0 C00D80D2
+00363834 09000014
+
+// No Death Zones [kgg]
+@enabled
+011243BC C0035FD6
+
+// God Mode [Devy]
+@enabled
+01053584 160080D2
+
+// No Drowning [kgg]
+@enabled
+01124B5C C0035FD6
+
+// Infinite Specials [tkgling]
+@enabled
+000864C4 340000F9
+
+// Always Movable [Haxxie]
+@enabled
+01004614 45000014
+
+// No GUI [Meshi]
+@enabled
+024A6784 00454443
+
+// Skip Inkopolis News [Dualie]
+@enabled
+01150864 1F2003D5
+01155638 22008052
+
+// Infinite Clams [Haxxie]
+@disabled
+01010D4C 20008052C0035FD6
+
+// Infinite Specials in SR [Haxxie 99]
+@enabled
+029DAA30 FFFF0000
+
+// 1 Sec Ranked Match [Haxxie]
+@disabled
+013532F0 20008052
+
+// Infinite Ranked Match [Haxxie]
+@enabled
+013532F0 00FEBF12
+
+// 1 Sec Turf War [Haxxie]
+@disabled
+013537E0 20008052
+
+// Infinite Turf War [Haxxie]
+@disabled
+013537E0 00FEBF12
+
+// Dummy Player [Shadow]
+@disabled
+001B3EA0 390280D2
+001B3F44 E0031FAA
+
+// Offline Lobby [kgg]
+@disabled
+014887BC C0035FD6
+
+// Infinite Power Clams [Haxxie]
+@enabled
+0136FD64 20008052280080D2
+
+// Infinite Ink [Haxxie]
+@enabled
+010770E0 20008052C0035FD6
+
+// All Shooters Rapidfire [Haxxie]
+@enabled
+0107B0B4 20008052C0035FD6
+01086E18 00102E1EC0035FD6
+
+// Offline Shop [Zewia]
+@enabled
+014F7F30 200080D2
+
+// Sting Ray Tank [Haxxie]
+@disabled
+0008338C 20778152C0035FD6
+
+// Ink Jet Tank [Haxxie]
+@disabled
+0008338C 40778152C0035FD6
+
+// Bomb Launcher Tank [Haxxie]
+@disabled
+0008338C 00778152C0035FD6
+
+// Staff Roll on Boot [Haxxie]
+@disabled
+000E2464 20018052C0035FD6
+
+// Speed Hack - Exefs Edition [Haxxie]
+@enabled
+010EFA9C 0090241EC0035FD6
+00FDDFB0 0090241EC0035FD6
+010EFAE4 0090241EC0035FD6
+00FDE094 0090241EC0035FD6
+00FDE220 0890241E0090241E
+
+// Infinite Special Duration [Haxxie]
+@enabled
+00FFBC60 E0FF9F52C0035FD6
+
+// Infinite Golden Eggs [tkgling]
+@enabled
+00653C74 480180520031881A
+
+// Force Agent 3 Cape [Haxxie]
+@enabled
+01016238 20008052C0035FD6
+
+// Force Load Halloween Decorations [Shadow]
+@disabled
+01346AB0 20008052C0035FD6
+01346B1C 20008052C0035FD6
+
+// Load Frosty Fest Decorations [Shadow + Zewia]
+@disabled
+01346AB0 400080D2C0035FD6
+01346B1C 400080D2C0035FD6
+
+// Load Final Fest + Halloween Decorations [Shadow]
+@disabled
+01346AB0 20008052C0035FD6
+01346B1C 20008052C0035FD6
+
+// Force Octo Expansion Plaza Camera [Shadow]
+@enable
+01154F0C 81008052
+
+// Ink Armor only Effects Everywhere [Haxxie]
+@disabled
+00FFD98C 20008052C0035FD6
+
+// Cool Effect [Haxxie]
+@disabled
+00FFD9D0 20008052C0035FD6
+
+// All Weapons in Salmon Run [Haxxie]
+@disabled
+000865DC 3F0000F9
+
+// Force Octo Expansion Spawn in Plaza [Shadow] [5.1.0]
+@enabled
+00A0B834 E8008052
+
+// No Spawn Barrier [Haxxie]
+@enabled
+00B655D8 14000014
+
+// Rival Fix [Shadow]
+@enabled
+010DBA70 0D000014
+010DBAD4 E0031FAA
+013B9924 200080D2
+
+// You Are Sanitized Octoling [Haxxie]
+@enabled
+001B371C E0008052
+001B3728 C00C8052
+002F53B8 000A80D2C0035FD6
+
+// You Are Rival Octoling [Haxxie]
+@disabled
+001B371C C0008052
+001B3728 800C8052
+002F53B8 000A80D2C0035FD6
+
+// You Are Elite Rival Octoling [Haxxie]
+@disabled
+001B371C C0008052
+001B3728 A00C8052
+002F53B8 000A80D2C0035FD6
+
+// Weapon Is Rainmaker [Haxxie]
+@enabled
+00FEDEE8 2800805208D82F39
+
+// Better Fly [Haxxie]
+@enabled
+00FF8668 01000014

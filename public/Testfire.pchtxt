@@ -1,0 +1,54 @@
+@nsobid-0F129135D8A7621C9E4940B0C3808BF0
+#Splatoon 2 Testfire
+
+@flag offset_shift 0x100
+
+// Fly [kgg]
+@disabled
+00733BD8 C0035FD6
+
+// Always Movable [Haxxie]
+@enabled
+0073C820 40000014
+
+// Better Fly [Haxxie]
+@enabled
+00733BF4 04000014
+
+// Infinite Specials [Haxxie]
+@enabled
+0002E25C 340000F9
+
+// No Death Zone [kgg]
+@enabled
+007FC158 C0035FD6
+
+// No Water [Zewia]
+@enabled
+007FC190 C0035FD6
+
+// Weapon Is Rainmaker [Haxxie]
+@disabled
+0072C3C0 2800805208502F39
+
+// Allow Rainmaker to Shoot [Haxxie]
+@disabled
+00794D1C 0C000014
+
+// Rapidfire Bombs [Haxxie]
+@enabled
+007202E8 73000014
+007B0A14 20008052
+
+// Infinite Ink [Haxxie]
+@enabled
+00787BBC 20008052C0035FD6
+
+// Swim Everywhere [Haxxie]
+@enabled
+007F63FC 10000014
+
+// All Shooters Rapidfire [Haxxie]
+@enabled
+0078AD38 20008052C0035FD6
+00794A20 00102E1EC0035FD6

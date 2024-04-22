@@ -1,0 +1,95 @@
+@nsobid-26D72E09076C3B11F53CC37E86960692
+#Splatoon 2 5.0.0
+@flag offset_shift 0x100
+
+// One Player Private Battles [Oat]
+@enabled
+00356498 1F2003D51F2003D50900
+003564A3 14
+0035D824 1F2003D51F2003D50900
+0035D82F 14
+014A5230 21008052
+014C2D64 21008052
+014C2220 1F2003D5
+
+// Fly [kgg]
+@enabled
+00FF0740 C0035FD6
+
+// Jump Height Modifier [Haxxie]
+@enabled
+00FF8278 44000014
+
+// Automatic Ultra Rapidfire Bombs [Haxxie]
+@enabled
+00FD5F1C 78000014
+010A45DC 11000014
+010A4620 20008052
+01082624 29000014
+
+// Swim Everywhere [Devy]
+@enabled
+0100CACC 07000014
+0100CA98 48008052
+0110E4CC 1F2003D5
+0110E0EC 540080D2
+010EDE74 13000014 
+
+// Map Force [Zewia]
+@enabled
+014C2088 C00D80D2
+0035AFB0 09000014
+
+// No Death Zones [kgg]
+@enabled
+0111C404 C0035FD6
+
+// God Mode [Devy]
+@enabled
+0104B69C 160080D2
+
+// No Drowning [kgg]
+@enabled
+0111CBA4 C0035FD6
+
+// Infinite Specials [tkgling]
+@enabled
+00082E68 340000F9
+
+// Always Movable [Haxxie]
+@enabled
+00FFC734 45000014
+
+// Infinite Clams [Haxxie 99]
+@enabled
+01008E70 01000014
+01008E94 01000014
+
+// Infinite Specials in SR [Haxxie 99]
+@enabled
+029D2A30 FFFF0000
+
+// 1 Sec Ranked Match [Haxxie]
+@disabled
+0134B1E4 20008052
+
+// Infinite Ranked Match [Haxxie]
+@enabled
+0134B1E4 00FEBF12
+
+// 1 Sec Turf War [Haxxie]
+@disabled
+0134B6D4 20008052
+
+// Infinite Turf War [Haxxie]
+@disabled
+0134B6D4 00FEBF12
+
+// Dummy Player [Shadow]
+@disabled
+001B05B4 390280D2
+001B0658 E0031FAA
+
+// Offline Lobby [kgg]
+@disabled
+014808A4 C0035FD6

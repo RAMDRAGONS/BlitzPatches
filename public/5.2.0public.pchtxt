@@ -1,0 +1,405 @@
+@nsobid-DA404117DA4A7D6CB1CDB2BCD730582A
+#Splatoon 2 5.2.0 Patches Pack by Haxxie :3
+#If you get banned you are the one responsible, and there is definetly a chance of you getting banned for using those
+ 
+@flag offset_shift 0x100
+
+// One Player Private Battles [OatmealDome]
+@enabled
+00367FFC 1F2003D51F2003D50900
+00368007 14
+0036F3A4 1F2003D51F2003D50900
+0036F3AF 14
+014D4968 1F2003D5
+014B7680 21008052
+014D54AC 21008052
+
+// Better Fly [Haxxie]
+@enabled
+01001D34 01000014
+
+// Jump Height Modifier [Haxxie]
+@disabled
+024B1DB0 CDCC5C40
+
+// Automatic Ultra Rapidfire Bombs [Haxxie]
+@enabled
+00FE72EC 78000014
+010B5BF0 11000014
+010B5C34 20008052
+01093BF8 29000014
+
+// No Spawn Barrier [Haxxie]
+@enabled
+00B6EB10 14000014
+
+// Moon Jump [Takaharu]
+@disabled
+01001D18 06000014
+0100C084 C0035FD6
+
+// Air Walk [Takaharu]
+@disabled
+010C7484 20008052C0035FD6
+
+// No Water [Zewia] 
+@enabled
+0112E260 C0035FD6
+
+// No Death Zones [kgg]
+@enabled
+0112DAC0 C0035FD6
+
+// Always Movable [Haxxie]
+@enabled
+0100DD5C 45000014
+
+// Swim Everywhere [Haxxie]
+@enabled
+0111FB0C 15000014
+
+// Skip Inkopolis News [Dualie]
+@disabled
+011527E8 1F2003D5
+0115ED58 22008052
+
+// Infinite Ink [Haxxie]
+@enabled
+010807A4 20008052C0035FD6
+
+// All Shooters Rapidfire + Inkjet Ultra Rapidfire [Haxxie]
+@enabled
+01084778 20008052C0035FD6
+01090504 00102E1EC0035FD6
+01013F40 C0035FD6
+
+// Infinite Specials [tkgling]
+@enabled
+000864E8 340000F9
+
+// Infinite Jump [asasasa98765]
+@disabled
+024B1980 0A2D2D3D
+
+// Force Agent 3 Cape [Haxxie]
+@enabled
+0101F8FC 20008052C0035FD6
+
+// Offline Shop [Zewia]
+@enabled
+01502110 200080D2
+
+// Offline Lobby [kgg]
+@disabled
+01488CE8 C0035FD6
+
+// Infinite Clams [Haxxie]
+@disabled
+0101A424 20008052C0035FD6
+
+// Infinite Power Clams [Haxxie]
+@enabled
+01379788 20008052280080D2
+
+// No Map Error [Zewia]
+@enabled
+0036CB24 09000014
+
+// Map Force [Zewia]
+@disabled
+014D47D0 C00D80D2
+0036CB24 09000014
+
+// No GUI [Meshi]
+@disabled
+024B195C 00454443
+
+// Infinite Clams [Haxxie]
+@disabled
+0101A424 20008052C0035FD6
+
+// Infinite Specials in SR [Haxxie 99]
+@enabled
+029E5A30 FFFF0000
+
+// 1 sec Ranked Match [Haxxie]
+@disabled
+0135CCE4 20008052
+
+// 1 sec Turf Match [Haxxie]
+@disabled
+0135D1D4 20008052
+
+// Speed Hack - Exefs Edition [Haxxie]
+@enabled
+00FE74E8 0090241EC0035FD6
+00FE75CC 0090241EC0035FD6
+00FE7758 0890241E0090241E
+010F91A0 0090241EC0035FD6
+010F91E8 0090241EC0035FD6
+
+// Infinite Special Duration [Haxxie]
+@disabled
+01003BAC E0FF9F52C0035FD6
+
+// Disable Music [Khangaroo]
+@disabled
+018BB060 1F2003D5
+
+// Force Inkflakes [Zewia]
+@disabled
+001147D8 1F2003D5
+006E29A0 006EBED4
+
+// Force Glowing Ink [Zewia] 
+@enabled
+00114CBC 04000014
+00114CE0 1F2003D5
+
+// No Charger Delay [Haxxie]
+@enabled
+0101CC1 3A000014
+
+// No Knockback [OctoSquiddy]
+@disabled
+0104AF38 C0035FD6
+
+// Prevent Models from Loading [AmazingChz]
+@disabled
+009EE838 C0035FD6
+
+// All DLC Gear Unlocker [Khangaroo]
+@disabled
+0006DAD0 1FFD1F71
+
+// Use MC Diaries weather system everywhere [Shadow]
+@disabled
+00A194D8 0760B8520701070B
+00A1954C 070000F9
+00A34D50 C9CE00B0297D3F91 
+00A34D7C 37000014
+00A34E50 200080D2 
+00A34E58 E0031FAA
+
+// Force night plaza [Shadow + atom_alp]
+@disabled
+00A25E30 1F2003D5 
+006E3F44 530080D2
+0240FE19 "VR_SkyNightPlaza"
+
+// Dancing NPC [by random]
+@disabled
+00AB8450 1F2003D5 
+00AB853C 1F2003D5 
+
+// Dummy Player [Shadow] 
+@disabled
+001B3F0C 390280D2
+001B41EC E0031FAA
+
+// No Character Restrictions [Shadow]
+@enabled
+002FE4B4 A8008052
+002FE524 A8008052
+002FE5A8 A8008052
+003087B0 A8008052
+003087F4 A8008052
+
+// Painted When Moving [Takaharu]
+@disabled
+010C5D0C 20008052C0035FD6
+010C7484 20008052C0035FD6
+
+// Can't Climb Walls [Takaharu]
+@disabled
+0100A194 C0035FD6
+
+// Staff Roll on Boot [Haxxie]
+@disabled
+000E24D0 20018052C0035FD6
+
+// Beta Recon [Haxxie]
+@disabled
+0240CE3C 5665727375730000
+0240CE44 000000
+
+// Invisible Player [Haxxie]
+@disabled
+010E2F0C C0035FD6
+
+// Bubble Armor Everywhere [Haxxie]
+@disabled
+01123600 20008052C0035FD6
+01123788 20008052C0035FD6
+
+// Ink Armor Everywhere [Haxxie]
+@disabled
+01123600 20008052C0035FD6
+
+// Ink Armor only Effects Everywhere [Haxxie]
+@disabled
+01007058 20008052C0035FD6
+
+// Cool Effect [Haxxie]
+@disabled
+0100709C 20008052C0035FD6
+
+// Remove 2D news layer [Shadow]
+@disabled
+0010F8B4 07000014
+
+// Freeze Bombs After Explosion [AmazingChz] 
+@disabled
+0046B64C 800C8052C0035FD6
+
+// Force Story Mode Credits Plaza Camera [Shadow]
+@disabled
+0115E62C 61008052
+
+// Force Octo Expansion Spawn in Plaza [Shadow]
+@disabled
+00A14D6C E8008052
+
+// All Weapons in Salmon Run [Haxxie]
+@disabled
+00086600 3F0000B9
+
+// Weapon Is Rainmaker [Haxxie]
+@disabled
+00FF75B4 2800805208D82F39
+
+// Paint Point 0 Display Only [Takaharu]
+@disabled
+012F8F60 00008052C0035FD6
+012F8FCC 00008052C0035FD6
+
+// Force news (how does this not break?) [Shadow]
+@enabled
+01142E40 200080D2C0035FD6
+
+// Rival Fix [Shadow]
+@disabled
+010E5174 0D000014
+010E51D8 E0031FAA
+013C35C8 200080D2
+
+// You Are Sanitized Octoling [Haxxie]
+@disabled
+001B3788 E0008052
+001B3794 C00C8052
+002FE668 000A80D2C0035FD6
+
+// You Are Rival Octoling [Haxxie]
+@disabled
+001B3788 C0008052
+001B3794 800C8052
+002FE668 000A80D2C0035FD6
+
+// You Are Elite Rival Octoling [Haxxie]
+@disabled
+001B3788 C0008052
+001B3794 A00C8052
+002FE668 000A80D2C0035FD6
+
+// Force Splatfest Plaza [Shadow]
+@enabled
+00DC0624 20008052C0035FD6 // enable Game::PlazaFestSignboard::isCreateModel_
+011FADD0 1F2003D5 // enable light animator in Game::SceneSound::load_
+011FC008 1F2003D5 // attach light animator to plaza stage (stage must be forced in BYML!)
+011FED70 1F2003D5 // use Game::SceneBgmPlazaFest
+00DD4218 20008052 // enable Game::PlazaTv::jobSetup_ fes anim
+00DD2C48 20008052 // correct Game::PlazaTv::playAnim_
+00DD30F8 20008052 // correct Game::PlazaTv::load_
+00DD3178 20008052 // ^
+00DD31F8 20008052 // ^
+01141350 1F2003D5 // store proper fest value in Game::SeqMgrPlaza::load
+0114136C 1F2003D5 // ^
+0114138C 1F2003D5 // ^
+00DAFE90 20008052 // init music link animation controller for idols
+00DAFEEC 20008052 // init message receivers for newsidol
+00DB172C 20008052 // use fest condition with idol news state machine
+01131568 20008052 // correct Game::CameraHolderPlaza::changeNewsCamera
+001777A4 20008052 // correct Cmn::NewsScriptCommandSpeak::enterCommand
+00DB03CC 20008052 // correct NpcIdolNews::countAnimSlot_
+00DB16E4 20008052 // correct NpcIdolNews::endNews
+000B2C9C 42008052
+00DAF8B8 20008052 // correct idol scratch anim
+00DAF260 20008052 // correct idol emotional anim
+00DAF640 20008052 // ^
+00175940 20008052 // correct scripting
+001759B0 20008052 // ^
+00175A7C 20008052 // ^
+00175AEC 20008052 // ^
+00176458 20008052 // ^
+00176634 20008052 // ^
+00176728 20008052 // ^
+00176758 20008052 // ^
+001766FC 20008052 // ^
+003F6C18 20008052 // adjust layout handling
+01136430 44008052
+01137360 1F2003D5 // precisely control news plan 
+01137370 E0031F2A // ^
+01137560 E0031F2A // ^
+011375BC E0031F2A // ^
+00DC671C 20008052 // Make Marie dance
+00DC7C3C 20008052 // ^
+00DC7998 20008052 // ^
+00F2CB48 20008052 // Make Murch dance
+00F2BB60 20008052 // ^
+00F2BCA0 20008052 // ^
+00F2CE58 20008052 // ^
+00F2CE94 20008052 // ^
+00F2D380 20008052 // ^
+00F3191C 20008052 // Make Judd dance
+00F31AE0 20008052 // ^
+00F31D70 20008052 // ^
+00F31EFC 20008052 // ^
+00F45314 20008052 // Make Crusty Sean dance
+00F45394 20008052 // ^
+00F45424 20008052 // ^
+
+// Force Night Time [Shadow]
+@enabled
+00A36918 04000014 // force fest condition in Game::GfxMgr::setupHourImpl_
+00A36930 1C000014 // exit func (Game::GfxMgr::setupHourImpl_)
+
+// Off the hook splatfest locations [Shadow]
+@enabled
+01132240 20008052 // correct setAsProgressOrFestTitle
+00DC20C0 1F2003D5 // enable Game::PlazaFestStage::load_
+00DB13A0 20008052 // correct mtx in Game::NpcIdolNews::stateEnterNews_
+00DB034C 1F2003D5 //  correct mtx in Game::NpcIdolNews::onActivate_
+
+// No Water EnvSet [Haxxie]
+@enabled
+00A22418 0F000014
+
+// Dark Yellow Color hack [Haxxie]
+@disabled
+00144CB4 4862019008812F91
+00144CBC 00410191C0035FD6
+
+// INV000 Gear in Shop [Haxxie]
+@enabled
+0007FCC0 BA000014
+0007FFA8 53008052
+
+// sub_E24D0 - getCurMode (0 = versus)
+// Night Matches [Haxxie]
+@enabled
+00A36918 EEAEDA97A0000035 // Mode = Versus Condition
+00A36920 E8031F3268AA00B9 // Store Value
+00A36928 1E000014 // Exit Function
+
+// TurfWar over TwoShot (Worse Version) [Haxxie]
+@disabled
+00A02C7C D8FFFF17
+
+// FreeTest over TwoShot [Haxxie]
+@enabled
+00A02C7C 23000014
+
+// Slosher Rapidfire [Haxxie + Takaharu]
+@enabled
+0108723C 01000014 
+01008F18 20008052C0035FD6

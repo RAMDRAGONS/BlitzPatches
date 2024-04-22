@@ -1,0 +1,154 @@
+@nsobid-EFCC50C2257D55E2B633A08DAD145A73
+#Splatoon 2 5.0.1
+
+@flag offset_shift 0x100
+
+// One Player Private Battles [Oat]
+@enabled
+00369478 1F2003D51F2003D50900
+00369483 14
+00370804 1F2003D51F2003D50900
+0037080F 14
+014BAAC8 21008052
+014D866C 21008052
+014D7B28 1F2003D5
+
+// Fly [kgg]
+@enabled
+01004B1C C0035FD6
+
+// Jump Height Modifier [Haxxie]
+@enabled
+024B4B04 CDCC5C40
+
+// Automatic Ultra Rapidfire Bombs [Haxxie]
+@enabled
+00FEA2B8 78000014
+010B89C0 11000014
+010B8A04 20008052
+01096A08 29000014
+
+// Swim Everywhere [Devy]
+@enabled
+01020EB0 07000014
+01020E7C 48008052
+0112292C 1F2003D5
+0112254C 540080D2
+
+// Map Force [Zewia]
+@enabled
+014D7990 C00D80D2
+0036DF90 09000014
+
+// No Death Zones [kgg]
+@enabled
+01130890 C0035FD6
+
+// God Mode [Devy]
+@enabled
+0105FA80 160080D2
+
+// No Drowning [kgg]
+@enabled
+01131030 C0035FD6
+
+// Infinite Specials [tkgling]
+@enabled
+00084C64 340000F9
+
+// Always Movable [Haxxie]
+@enabled
+01010B10 45000014
+
+// No GUI [Meshi]
+@enabled
+024B46B0 00454443
+
+// Infinite Clams [Haxxie 99]
+@disabled
+0101D254 01000014
+0101D278 01000014
+
+// Infinite Specials in SR [Haxxie 99]
+@enabled
+029E8A30 FFFF0000
+
+// 1 Sec Ranked Match [Haxxie]
+@disabled
+0135F670 20008052
+
+// Infinite Ranked Match [Haxxie]
+@enabled
+0135F670 00FEBF12
+
+// 1 Sec Turf War [Haxxie]
+@disabled
+0135FB60 20008052
+
+// Infinite Turf War [Haxxie]
+@disabled
+0135FB60 00FEBF12
+
+// Dummy Player [Shadow]
+@disabled
+001B28FC 390280D2
+001B29A0 E0031FAA
+
+// Offline Lobby [kgg]
+@disabled
+014960BC C0035FD6
+
+// Infinite Power Clams [Haxxie]
+@enabled
+0137C0E4 20008052280080D2
+
+// Infinite Ink [Haxxie]
+@enabled
+010835DC 20008052C0035FD6
+
+// All Shooters Rapidfire [Haxxie]
+@enabled
+010875B0 20008052C0035FD6
+01093314 00102E1EC0035FD6
+
+// Sting Ray Tank [Haxxie]
+@disabled
+00081B24 20778152C0035FD6
+
+// Ink Jet Tank [Haxxie]
+@disabled
+00081B24 40778152C0035FD6
+
+// Bomb Launcher Tank [Haxxie]
+@disabled
+00081B24 00778152C0035FD6
+
+// Staff Roll on Boot [Haxxie]
+@disabled
+000E0EC0 20018052C0035FD6
+
+// Speed Hack - Exefs Edition [Haxxie]
+@enabled
+010FBF70 0090241EC0035FD6
+00FEA4AC 0090241EC0035FD6
+010FBFB8 0090241EC0035FD6
+00FEA590 0090241EC0035FD6
+00FEA678 0890241E
+00FEA71C 0890241E0090241E
+00FF4128 0090241E
+00FF40F4 01000014
+00FF4100 01000014
+00FF3DC0 12000014
+
+// Infinite Special Duration [Haxxie]
+@enabled
+0100815C E0FF9F52C0035FD6
+
+// Infinite Golden Eggs [tkgling]
+@enabled
+0065E234 48018052
+0065E238 0031881A
+
+// Force Agent 3 Cape [Haxxie]
+@enabled
+01022738 20008052C0035FD6
