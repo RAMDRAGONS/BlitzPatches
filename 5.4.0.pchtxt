@@ -1,5 +1,5 @@
-@nsobid-03DCAD95E1AC643072F3A684F6740C85
-# Splatoon 2 5.5.1
+@nsobid-32A8F031861B76DF3D1080E6A52FE0B0
+# Splatoon 2 5.4.0
 
 @flag offset_shift 0x100
 
@@ -24,7 +24,7 @@
 014DFB14 21008052
 
 // Fly [kgg]
-@enabled
+@disabled
 0100BDE4 C0035FD6
 
 // Jump Height Modifier [Haxxie]
@@ -71,7 +71,7 @@
 010F2A8C C0035FD6
 
 // Force Agent 3 Cape [Haxxie]
-@disabled
+@enabled
 01029A30 20008052C0035FD6
 
 // Infinite Power Clams [Haxxie]
@@ -115,7 +115,7 @@
 000E24D0 20018052C0035FD6
 
 // Speed Hack - Exefs Edition [Haxxie]
-@enabled
+@disabled
 00FF15CC 0090241EC0035FD6
 00FF16B0 0090241EC0035FD6
 00FF183C 0890241E0090241E
@@ -181,7 +181,7 @@
 
 // Disable Music [Khangaroo]
 @disabled
-018C5764 1F2003D5
+018C56C8 1F2003D5
 
 // Force Inkflakes [Zewia]
 @disabled
@@ -566,11 +566,3 @@
 00F4F3F8 20008052 // Make Crusty Sean dance
 00F4F478 20008052 // ^
 00F4F508 20008052 // ^
-
-// Disable Auto Cam Movement [YoshiCrystal]
-@disabled
-010403D0 1F2003D5
-
-// Start Game on Timeout [asasasa]
-@enabled
-0036E304 21028052

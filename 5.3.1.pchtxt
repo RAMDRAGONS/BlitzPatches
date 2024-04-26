@@ -1,5 +1,5 @@
-@nsobid-03DCAD95E1AC643072F3A684F6740C85
-# Splatoon 2 5.5.1
+@nsobid-CF91518983FCB18D11B0FF1DAC22300F
+# Splatoon 2 5.3.1
 
 @flag offset_shift 0x100
 
@@ -24,8 +24,8 @@
 014DFB14 21008052
 
 // Fly [kgg]
-@enabled
-0100BDE4 C0035FD6
+@disabled
+0100BEF0 C0035FD6
 
 // Jump Height Modifier [Haxxie]
 @disabled
@@ -33,23 +33,23 @@
 
 // Swim Everywhere [Haxxie]
 @enabled
-01129C58 15000014
+01129D64 15000014
 
 // Automatic Ultra Rapidfire Bombs [Haxxie]
 @enabled
-00FF13D8 78000014
-010BFD24 11000014
-010BFD68 20008052
-0109DD2C 29000014
+00FF14DC 78000014
+010BFE30 11000014
+010BFE74 20008052
+0109DE38 29000014
 
 // Infinite Ink [Haxxie]
 @enabled
-0108A8D8 20008052C0035FD6
+0108A9E4 20008052C0035FD6
 
 // All Shooters Rapidfire [Haxxie]
 @enabled
-0108E8AC 20008052C0035FD6
-0109A638 00102E1EC0035FD6
+0108E9B8 20008052C0035FD6
+0109A744 00102E1EC0035FD6
 
 // Infinite Specials [Haxxie]
 @enabled
@@ -57,26 +57,26 @@
 
 // God Mode [Devy]
 @disabled
-01066D7C 160080D2
+01066E88 160080D2
 
 // No Death Zones [kgg]
 @enabled
-01137C44 C0035FD6
+01137D50 C0035FD6
 
 // Always Movable v3 [Haxxie+Takaharu]
 @enabled
-01017E94 45000014
-010652D4 07000014
-0106A8D4 16000014
-010F2A8C C0035FD6
+01017FA0 45000014
+010653E0 07000014
+0106A9E0 16000014
+010F2B98 C0035FD6
 
 // Force Agent 3 Cape [Haxxie]
-@disabled
-01029A30 20008052C0035FD6
+@enabled
+01029B3C 20008052C0035FD6
 
 // Infinite Power Clams [Haxxie]
 @enabled
-0138390C 20008052280080D2
+01383A18 20008052280080D2
 
 // Offline Shop [Zewia]
 @enabled
@@ -84,7 +84,7 @@
 
 // No Drowning [kgg]
 @disabled
-011383E4 C0035FD6
+011384F0 C0035FD6
 
 // No GUI [Meshi]
 @disabled
@@ -92,7 +92,7 @@
 
 // Infinite Clams [Haxxie]
 @enabled
-01024550 20008052C0035FD6
+0102465C 20008052C0035FD6
 
 // Infinite Specials in SR [Haxxie]
 @enabled
@@ -100,31 +100,31 @@
 
 // Change Ranked Match Time [Haxxie]
 @disabled
-01366E68 20008052
+01366F74 20008052
 
 // Change Turf War Time [Haxxie]
 @disabled
-01367358 20008052
+01367464 20008052
 
 // Offline Lobby [kgg]
 @disabled
-01493244 C0035FD6
+01493350 C0035FD6
 
 // Staff Roll on Boot [Haxxie]
 @disabled
 000E24D0 20018052C0035FD6
 
 // Speed Hack - Exefs Edition [Haxxie]
-@enabled
-00FF15CC 0090241EC0035FD6
-00FF16B0 0090241EC0035FD6
-00FF183C 0890241E0090241E
-011032D4 0090241EC0035FD6
-0110331C 0090241EC0035FD6
+@disabled
+00FF16D8 0090241EC0035FD6
+00FF17BC 0090241EC0035FD6
+00FF1948 0890241E0090241E
+011033E0 0090241EC0035FD6
+01103428 0090241EC0035FD6
 
 // Infinite Special Duration [Haxxie]
 @disabled
-0100DCA4 E0FF9F52C0035FD6
+0100DDB0 E0FF9F52C0035FD6
 
 // Beta Recon [Haxxie]
 @disabled
@@ -133,39 +133,20 @@
 
 // Rival Fix [Shadow]
 @disabled
-010EF2A8 0D000014
-010EF30C E0031FAA
-
-// Sanitized Rival Plaza NPCs (rq Rival Fix) [Haxxie]
-@disabled
-0008A2F4 E8008052
-0008A31C C90C8052
-0008A32C 090A80D2
-
-// Rival Plaza NPCs (rq Rival Fix) [Haxxie]
-@disabled
-0008A2F4 C8008052
-0008A31C 890C8052
-0008A32C 090A80D2
-
-// Npc Cape (rq OE) [Haxxie]
-@disabled
-000DB078 20008052
-00F4282C 25008052
-00193548 A80000B4
-0019355C 689E41F968FFFFB5
+010EF3B4 0D000014
+010EF418 E0031FAA
 
 // Ink Armor Everywhere [Haxxie]
 @disabled
-0112D784 20008052C0035FD6
+0112D890 20008052C0035FD6
 
 // Ink Armor only Effects Everywhere [Haxxie]
 @disabled
-01011148 20008052C0035FD6
+01011254 20008052C0035FD6
 
 // No Water [Zewia]
 @enabled
-011383E4 C0035FD6
+011384F0 C0035FD6
 
 // Moon Jump [asasasa98765]
 @disabled
@@ -181,7 +162,7 @@
 
 // Disable Music [Khangaroo]
 @disabled
-018C5764 1F2003D5
+018C56C8 1F2003D5
 
 // Force Inkflakes [Zewia]
 @disabled
@@ -212,23 +193,23 @@
 
 // Force Load Halloween Decorations [Shadow]
 @disabled
-0135A334 20008052C0035FD6
-0135A398 20008052C0035FD6
+0135A440 20008052C0035FD6
+0135A4A4 20008052C0035FD6
 
 // Load Frosty Fest Decorations [Shadow + Zewia]
 @disabled
-0135A334 400080D2C0035FD6
-0135A398 400080D2C0035FD6
+0135A440 400080D2C0035FD6
+0135A4A4 400080D2C0035FD6
 
 // Load Final Fest + Halloween Decorations [Shadow]
 @disabled
-0135A334 20008052C0035FD6
-0135A398 20008052C0035FD6
+0135A440 20008052C0035FD6
+0135A4A4 20008052C0035FD6
 
 // Load New Year Decorations [Shadow + Zewia]
 @disabled
-0135A334 400080D2C0035FD6
-0135A398 400080D2C0035FD6
+0135A440 400080D2C0035FD6
+0135A4A4 400080D2C0035FD6
 
 // Force night plaza [Shadow + atom_alp]
 @disabled
@@ -238,8 +219,8 @@
 
 // All Rollers Stand Shots Use Light Roller Param [Haxxie]
 @disabled
-010AC6B0 48000014
-01392F58 05000014
+010AC7BC 48000014
+01393064 05000014
 
 // Dancing NPC [by random]
 @disabled
@@ -252,7 +233,7 @@
 
 // Marie Isn't Shy In Plaza [Shadow]
 @disabled
-00DD15E0 21008052
+00DD16EC 21008052
 
 // Who watches the news anymore? [Shadow]
 @disabled
@@ -273,11 +254,11 @@
 
 // No Bomb Aim Line [Haxxie]
 @disabled
-010B25C4 2C010014
+010B26D0 2C010014
 
 // Force Story Mode Credits Plaza Camera [Shadow]
 @disabled
-011687B0 61008052
+011688BC 61008052
 
 // Force Octo Expansion Spawn in Plaza [Shadow]
 @disabled
@@ -294,12 +275,12 @@
 
 // Fast Respawn [Takaharu]
 @enabled
-01103538 E0031F2AC0035FD6
+01103644 E0031F2AC0035FD6
 
 // Moon Jump [Takaharu]
 @enabled
-0100BE10 06000014
-010161BC C0035FD6
+0100BF1C 06000014
+010162C8 C0035FD6
 
 // No Character Restrictions [Shadow]
 @disabled
@@ -315,24 +296,24 @@
 
 // Better Fly [Haxxie]
 @disabled
-0100BE2C 01000014
+0100BF38 01000014
 
 // Jetpack that cannot fly [Takaharu]
 @disabled
-010CFE40 0090241EC0035FD6
+010CFF4C 0090241EC0035FD6
 
 // Air Walk [Takaharu]
 @disabled
-010D15B8 20008052C0035FD6
+010D16C4 20008052C0035FD6
 
 // Painted When Moving [Takaharu]
 @disabled
-010CFE40 20008052C0035FD6
-010D15B8 20008052C0035FD6
+010CFF4C 20008052C0035FD6
+010D16C4 20008052C0035FD6
 
 // Can't Climb The Wall [Takaharu]
 @disabled
-010142CC C0035FD6
+010143D8 C0035FD6
 
 // Mission Bomb Change (Splash) [Takaharu]
 @disabled
@@ -433,15 +414,15 @@
 
 // Squid Everywhere [Takaharu]
 @disabled
-00FF0FEC 20008052C0035FD6
+00FF10F8 20008052C0035FD6
 
 // Searched Everywhere [Takaharu]
 @disabled
-01029208 20008052C0035FD6
+01029314 20008052C0035FD6
 
 // Tornado Carrying [Takaharu]
 @disabled
-00FEFF0C 20008052C0035FD6
+00FF0018 20008052C0035FD6
 
 // Lan Local Lobby [hika2420]
 @disabled
@@ -475,38 +456,38 @@
 
 // Slosher Rapidfire [Haxxie+Takaharu]
 @disabled
-01013010 20008052C0035FD6
-01091370 01000014
+0101311C 20008052C0035FD6
+0109147C 01000014
 
 // Force news (how does this not break?) [Shadow]
 @enabled
-0114CFC4 200080D2C0035FD6
+0114D0D0 200080D2C0035FD6
 
 // Add mission intro to news [Shadow]
 @disabled
-01140DA0 1F2003D5
+01140EAC 1F2003D5
 
 // Add mission ending to news [Shadow]
 @disabled
-01140D60  1F2003D5
+001140E6C 1F2003D5
 
 // Force Night Time [Shadow]
 @disabled
 00A40B08 04000014 // force fest condition in Game::GfxMgr::setupHourImpl
 00A40B50 10000014 // exit func (Game::GfxMgr::setupHourImpl)
-00DDE2FC 20008052 // enable Game::PlazaTv::jobSetup fes anim
-00DDCD2C 20008052 // correct Game::PlazaTv::playAnim
-00DDD1DC 20008052 // correct Game::PlazaTv::load_
-00DDD25C 20008052 // ^ // Found match at 00DD3178+34 (00DD31AC)
-00DDD2DC 20008052 // ^ // Found match at 00DD31F8+4 (00DD31FC)
-0114B4EC 20008052 // store proper fest value in Game::SeqMgrPlaza::load
+00DDE408 20008052 // enable Game::PlazaTv::jobSetup fes anim
+00DDCE38 20008052 // correct Game::PlazaTv::playAnim
+00DDD2E8 20008052 // correct Game::PlazaTv::load_
+00DDD368 20008052 // ^ // Found match at 00DD3178+34 (00DD31AC)
+00DDD3E8 20008052 // ^ // Found match at 00DD31F8+4 (00DD31FC)
+0114B5F8 20008052 // store proper fest value in Game::SeqMgrPlaza::load
 00DBA080 20008052 // init music link animation controller for idols
 00DBA0DC 20008052 // init message receivers for newsidol
 00DBB91C 20008052 // use fest condition with idol news state machine
 
 // Off the hook splatfest locations [Shadow]
 @disabled
-011321D4 20008052 // correct setAsProgressOrFestTitle
+011322E0 20008052 // correct setAsProgressOrFestTitle
 00DC20C0 1F2003D5 // enable Game::PlazaFestStage::load_
 00DB13A0 20008052 // correct mtx in Game::NpcIdolNews::stateEnterNews_
 00DB034C 1F2003D5 //  correct mtx in Game::NpcIdolNews::onActivate_
@@ -518,29 +499,29 @@
 
 // Force Splatfest Plaza [Shadow]
 @enabled
-00DCA708 20008052C0035FD6 // enable Game::PlazaFestSignboard::isCreateModel_
-01204F54 1F2003D5 // enable light animator in Game::SceneSound::load_
-0120618C 1F2003D5 // attach light animator to plaza stage (stage must be forced in BYML!)
-01208EF4 1F2003D5 // use Game::SceneBgmPlazaFest
-00DDE2FC 20008052 // enable Game::PlazaTv::jobSetup_ fes anim
-00DDCD2C 20008052 // correct Game::PlazaTv::playAnim_
-00DDD1DC 20008052 // correct Game::PlazaTv::load_
-00DDD25C 20008052 // ^
-00DDD2DC 20008052 // ^
-0114B4EC 1F2003D5 // store proper fest value in Game::SeqMgrPlaza::load
-0114B4F0 1F2003D5 // ^
-0114B510 1F2003D5 // ^
-00DB9F74 20008052 // init music link animation controller for idols
-00DB9FD0 20008052 // init message receivers for newsidol
-00DBB810 20008052 // use fest condition with idol news state machine
-0113B6EC 20008052 // correct Game::CameraHolderPlaza::changeNewsCamera
+00DCA814 20008052C0035FD6 // enable Game::PlazaFestSignboard::isCreateModel_
+01205060 1F2003D5 // enable light animator in Game::SceneSound::load_
+01206298 1F2003D5 // attach light animator to plaza stage (stage must be forced in BYML!)
+01209000 1F2003D5 // use Game::SceneBgmPlazaFest
+00DDE408 20008052 // enable Game::PlazaTv::jobSetup_ fes anim
+00DDCE38 20008052 // correct Game::PlazaTv::playAnim_
+00DDD2E8 20008052 // correct Game::PlazaTv::load_
+00DDD368 20008052 // ^
+00DDD3E8 20008052 // ^
+0114B5F8 1F2003D5 // store proper fest value in Game::SeqMgrPlaza::load
+0114B5FC 1F2003D5 // ^
+0114B61C 1F2003D5 // ^
+00DBA080 20008052 // init music link animation controller for idols
+00DBA0DC 20008052 // init message receivers for newsidol
+00DBB91C 20008052 // use fest condition with idol news state machine
+0113B7F8 20008052 // correct Game::CameraHolderPlaza::changeNewsCamera
 001777A4 20008052 // correct Cmn::NewsScriptCommandSpeak::enterCommand
-00DBA4B0 20008052 // correct NpcIdolNews::countAnimSlot_
-00DBB7C8 20008052 // correct NpcIdolNews::endNews
+00DBA5BC 20008052 // correct NpcIdolNews::countAnimSlot_
+00DBB8D4 20008052 // correct NpcIdolNews::endNews
 000B2C9C 42008052
-00DB999C 20008052 // correct idol scratch anim
-00DB9344 20008052 // correct idol emotional anim
-00DB9724 20008052 // ^
+00DB9AA8 20008052 // correct idol scratch anim
+00DB9450 20008052 // correct idol emotional anim
+00DB9830 20008052 // ^
 00175940 20008052 // correct scripting
 001759B0 20008052 // ^
 00175A7C 20008052 // ^
@@ -551,26 +532,18 @@
 00176758 20008052 // ^
 001766FC 20008052 // ^
 00400E08 20008052 // adjust layout handling
-011405B4 44008052 //
-011414E4 1F2003D5 // precisely control news plan
-011414F4 E0031F2A // ^
-011416E4 E0031F2A // ^
-01141740 E0031F2A // ^
-00DD0800 20008052 // Make Marie dance
-00DD1D20 20008052 // ^
-00DD1A7C 20008052 // ^
-00F3BA00 20008052 // Make Judd dance
-00F3BBC4 20008052 // ^
-00F3BE54 20008052 // ^
-00F3BFE0 20008052 // ^
-00F4F3F8 20008052 // Make Crusty Sean dance
-00F4F478 20008052 // ^
-00F4F508 20008052 // ^
-
-// Disable Auto Cam Movement [YoshiCrystal]
-@disabled
-010403D0 1F2003D5
-
-// Start Game on Timeout [asasasa]
-@enabled
-0036E304 21028052
+011406C0 44008052 //
+011415F0 1F2003D5 // precisely control news plan
+01141600 E0031F2A // ^
+011417F0 E0031F2A // ^
+0114184C E0031F2A // ^
+00DD090C 20008052 // Make Marie dance
+00DD1E2C 20008052 // ^
+00DD1B88 20008052 // ^
+00F3BB0C 20008052 // Make Judd dance
+00F3BCD0 20008052 // ^
+00F3BF60 20008052 // ^
+00F3C0EC 20008052 // ^
+00F4F504 20008052 // Make Crusty Sean dance
+00F4F584 20008052 // ^
+00F4F614 20008052 // ^
