@@ -21,3 +21,21 @@
 @disabled
 001A066C 1C000014
 001263A0 1F000014
+
+// DbgSetting over ShootingRange
+@disabled
+// first we need a way to access the scene
+01455850 540F1A00 // add the ptr to Cstm::newScene<TitleForShow::Scene>(int,sead::Heap *) to ShootingRange (not possible to do it patching .text, you need to patch .rela.dyn otherwise it will be overwritten with the relocation stuff)
+001A0F84 E0FF8152 // operator new(0x3F8) to operator new(0xFFF)
+001A0F94 ABAD2594 // TitleForShow::Scene::Scene to DbgSetting::Scene::Scene
+// then we need to replace the stubbed text render code
+0120828C 82030014 // branch Lp::Sys::DbgTextWriter::pilotDraw(agl::lyr::RenderInfo const&, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*)const to Lp::Sys::DbgTextWriter::productDraw(agl::lyr::RenderInfo const&, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*)const
+0120748C 16000014 // branch Lp::Sys::DbgTextWriter::pilotEntry(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*) to Lp::Sys::DbgTextWriter::productEntry(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*)
+01207490 CF000014 // branch Lp::Sys::DbgTextWriter::pilotEntryF(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*, ...) to Lp::Sys::DbgTextWriter::productEntryF(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*, ...)
+012074B4 18010014 // branch Lp::Sys::DbgTextWriter::pilotEntryV(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*, std::__va_list) to Lp::Sys::DbgTextWriter::productEntryV(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char const*, std::__va_list)
+012074B8 55010014 // branch Lp::Sys::DbgTextWriter::pilotEntry(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*) to Lp::Sys::DbgTextWriter::productEntry(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*)
+012074E0 57020014 // branch Lp::Sys::DbgTextWriter::pilotEntryV(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*, std::__va_list) to Lp::Sys::DbgTextWriter::productEntryV(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*, std::__va_list)
+012074BC 0E020014 // branch Lp::Sys::DbgTextWriter::pilotEntryF(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*, ...) to Lp::Sys::DbgTextWriter::productEntryF(int, sead::Vector2<float> const&, Lp::Sys::DbgTextWriter::ArgEx const*, char16_t const*, ...)
+// now to fix controls (tysm oatmealdome)
+012AF368 E0031FAA // set w0 to 0 so getCtrl doesn't try using random garbage data
+012AF36C 1BFFFF17 // branch Lp::Utl::Limit::getSceneDbgMixCtrl_Pilot(void) to Lp::Utl::getCtrl(int)
