@@ -233,3 +233,375 @@
 0004ac78 2F0080D2
 0004ac84 2F0000B9 // force RespawnNum to 1 in Cmn::Octa2DMapInfo::create to force OE lives to 1
 00b01ee4 1F2003D5 //NOP armor level check in Game::DamageSuddenDeathObjOcta::firstCalc_
+
+// Rival superjump marker not visible [Nacho]
+@enabled
+000A0E08 00008052
+
+//SOLO PRIVATE BATTLES 3.1.0
+@enabled
+002032c8 1f2003d51f2003d50900
+002032d3 14
+001fd2a4 1F2003D51F2003D50900
+001fd2af 14
+01289be8 21008052 
+012a6878 21008052
+012a5f70 1F2003D5
+
+// DbgText [Shadow]
+@disabled
+// Cui::TalkWindowBasePage::setParam
+00299618 E00315AA012080D262C23191420440F903008012BF034E941D000014
+// Game::RadioMessageWindowPage
+01112208 E00315AA012080D262E23591420440F903008012C32014941B000014
+// Game::RadioMessageOctaWindowPage
+01117854 E00315AA012080D262E23A91420440F903008012300B14941B000014
+01051E48 164542F9 // Game::SwitchExplanationText
+00B0E570 082142F9 // Game::ExplanationTextObjOcta
+
+// Rival Fix [Shadow]
+@enabled
+00F0FE80 0D000014
+00F0FEE4 E0031FAA
+011DFE54 200080D2
+
+// Mantle Always Created (Agent 3 Cape) [Haxxie]
+@enabled
+00E90F20 20008052C0035FD6
+
+// Special Cans Online [Haxxie]
+@disabled
+// 00923AD0 69008052 Octo Expansion Special Cans Crash
+00912BAC 69008052
+
+// Bcat2Rom + Ignore Invalid BcatData [Haxxie]
+@enabled
+01A7B668 20008052C0035FD6
+001AA660 E0031F2AC0035FD6
+001AE488 20008052C0035FD6
+001A7018 20008052C0035FD6
+001A7DAC 20008052C0035FD6
+001AB920 01000014
+001AB994 01000014
+001ABA0C 01000014
+00DA7244 C0035FD6
+
+// Force Night Time [Shadow]
+@disabled
+008E37C0 04000014 // force fest condition in Game::GfxMgr::setupHourImpl_
+008E37D8 10000014 // exit func (Game::GfxMgr::setupHourImpl_)
+
+// Off the hook splatfest locations [Shadow]
+@disabled
+00F5201C 20008052 // correct setAsProgressOrFestTitle
+00C3C8BC 1F2003D5 // enable Game::PlazaFestStage::load_
+00C2BACC 20008052 // correct mtx in Game::NpcIdolNews::stateEnterNews_
+00C2AAB4 1F2003D5 //  correct mtx in Game::NpcIdolNews::onActivate_
+
+// Force Splatfest Plaza [Shadow]
+@disabled
+00C3B384 20008052C0035FD6 // enable Game::PlazaFestSignboard::isCreateModel_
+01016F94 1F2003D5 // enable light animator in Game::SceneSound::load_
+010181C0 1F2003D5 // attach light animator to plaza stage (stage must be forced in BYML!)
+0101B05C 1F2003D5 // use Game::SceneBgmPlazaFest
+00C4EA90 20008052 // enable Game::PlazaTv::jobSetup_ fes anim
+00C4D250 20008052 // correct Game::PlazaTv::playAnim_
+00C4D878 20008052 // correct Game::PlazaTv::load_
+00C4D8F4 20008052 // ^
+00C4D970 20008052 // ^
+00F5B094 20008052 // store proper fest value in Game::SeqMgrPlaza::load
+00C2A58C 20008052 // init music link animation controller for idols
+00C2A5E4 20008052 // init message receivers for newsidol
+00C2BE48 20008052 // use fest condition with idol news state machine
+00F51354 20008052 // correct Game::CameraHolderPlaza::changeNewsCamera
+0014BF48 20008052 // correct Cmn::NewsScriptCommandSpeak::enterCommand
+00C2AB18 20008052 // correct NpcIdolNews::countAnimSlot_
+00C2BE08 20008052 // correct NpcIdolNews::endNews
+00068548 42008052
+00C29FF4 20008052 // correct idol scratch anim
+00C29950 20008052 // correct idol emotional anim
+00C29D2C 20008052 // ^
+0014A2F0 20008052 // correct scripting
+0014A35C 20008052 // ^
+0014A424 20008052 // ^
+0014A490 20008052 // ^
+0014ACC0 20008052 // ^
+0014AE98 20008052 // ^
+0014AF5C 20008052 // ^
+0014AF84 20008052 // ^
+0014AFB0 20008052 // ^
+0027EE64 20008052 // adjust layout handling
+00C4765C 20008052 // use fes for mtx fesfurniture
+00F55DE4 44008052
+00F56C44 1F2003D5 // precisely control news plan 
+00F56C54 E0031F2A // ^
+00F56D44 E0031F2A // ^
+00F56DA0 E0031F2A // ^
+00C40D9C 20008052 // Make Marie dance
+00C422E8 20008052 // ^
+00C41F94 20008052 // ^
+00D9C104 20008052 // Make Murch dance
+00D9B158 20008052 // ^
+00D9B2F4 20008052 // ^
+00D9C3A4 20008052 // ^
+00D9C3DC 20008052 // ^
+00D9C8C4 20008052 // ^
+00DA107C 20008052 // Make Judd dance
+00DA123C 20008052 // ^
+00DA1460 20008052 // ^
+00DA15E8 20008052 // ^
+00DB516C 20008052 // Make Crusty Sean dance
+00DB51E8 20008052 // ^
+00DB5274 20008052 // ^
+
+// Force news (how does this not break?) [Shadow]
+@disabled
+00F5CE78 200080D2C0035FD6
+
+// UICheck Scene Translation [Diam w/ help from newt]
+@enabled
+0377be0b "A: View"
+0377be15 "←→: Change Message"
+0377be3c "B: Return"
+0377be74 "Any Btn: Display"
+0377c0cc "A: All"
+0377c0dc "X: InBase"
+0377c18c "A: Open/Close Lyt"
+0377c1b1 "Y, X: Change Lyt"
+0377c1e3 "L: Show Btn Icon"
+0377c20b "X: Show Lyt"
+0377c230 "Y: Change Type [%d]"
+0377c250 "Chosen Button: [%s]"
+0377c322 "LR: Change Type"
+0377c33f "Type : [%s]"
+0377c350 "A: Open/Close Lyt"
+0377c366 "←→: Change Type (Enabled upon entry): %s"
+0377c3ad "LR: Change Gear (Enabled upon entry): %s %d"
+0377c503 "A: Display"
+0377c516 "X: Random Mode Change"
+0377c53e "A: View, Decide"
+0377c66b "Y: Set of player icons"
+0377c69f "←→: Change number of Salmon Eggs and Medals"
+0377c6db "↑↓: Change number of Golden Eggs by 1"
+0377c71e "←→↑↓: Change Attention"
+0377c748 "LR: Change Wave"
+0377c763 "ZL, ZR: Change Time"
+0377c781 "RStick In: Zoom In/Out"
+0377c7c4 "LStick In: View by part"
+0377c7fa "L: Hold for Final Wave"
+0377c829 "Starting!"
+0377c842 "Y: Text In"
+0377c861 "X: Text Out"
+0377c883 "ZL: While held, quote not reached"
+0377c8be "ZR: Local effect when pressed on tape-in"
+0377c907 "A: Open Lyt (Normal)"
+0377c935 "Y: Open Lyt (RandomNormal)"
+0377c969 "X: Open Lyt (RandomRare)"
+0377c99b "Y: Play Animation"
+0377c9b7 "LR: Previous Wave Height"
+0377c9dd "ZL, ZR: Wave Height after %s"
+0377ca03 "Y: Change Type"
+0377ca1f "A: Open Lyt"
+0377ca41 "X: Flash"
+0377ca5d "←→: Mode=%s"
+0377ca79 "Y: Result=%s"
+0377ca96 "A: Open/Proceed/Close Lyt"
+0377cbe0 "A: Ready"
+0377cbf2 "X: Go"
+0377cc01 "A: Start"
+0377cd61 "↑↓: Special Gauge"
+0377cd8e "←→: Danger Gauge"
+0377cdb2 "X: Change TeamColor (If TeamColor is used)"
+0377ce0a "X: Immediately Open/Close Lyt"
+0377ce35 "←→: Change Type"
+0377ce67 "↑↓: Color Change (Only Supported Types)"
+0377cec3 "↑↓: Change Label"
+0377cef2 "L: Force Decision"
+0377cf0b "The decision on the final page has been pressed."
+0377cf39 "-: Open/Close Lyt"
+0377cf5e "X: Return"
+0377d0b1 "←→: Gauge Increase/Decrease"
+0377d11d "A: Replace Texture"
+0377d203 "A: Open"
+0377d3e6 "X: [Undecided]"
+0377d3fb "Y: [Undecided]"
+0377d410 "↑↓: Increase/Decrease All Numbers"
+0377d434 "←→: Show/Hide Each Part"
+0377d46a "LR: Display Type"
+0377d486 "LStick In: Get Power Egg, Show Egg Balloon"
+0377d4f2 "RStick In: Close Egg Balloon, Target Icon Switch"
+0377d550 "ZL: Play Animation"
+0377d56d "ZR: Randomly set Power Eggs, Sea Cucumbers, and Targets"
+0377d5c6 "X: Play additional animation"
+0377d5e8 "LR: Switch Monitor Type"
+0377d60e "Current Monitor Type: [%s]"
+0377d633 "LR: Switch Type"
+0377d64d "ZL, ZR: Switch StageId"
+0377d66a "Current type: [%s]"
+0377d683 "Stage ID: [%d] [%s]"
+0377d69e "Decision button: %s"
+0377d6b3 "Camera options have been changed."
+0377d6e4 "Open Lyt (Hold L For First Stage Version)"
+0377d737 "Y: Challenge-Free Animation"
+0377d768 "Y: Switch Type [%d]"
+0377d78e "LR: Switch Stage ID"
+0377d7b0 "Decision button: %d"
+0377d7c5 "R: Switch Type (Without A Pressed)"
+0377d7ff "Y, X: Play Animation"
+0377d81d "LR: Switch Stage"
+0377d83d "Current Stage ID: [%d]"
+0377d85b "Y: Change Type [%s]"
+0377d87e "↑↓: Damage Control"
+0377d8bb "←→: Change Label"
+0377d8dc "Label Name: [%s]"
+0377dc2e "X:  Open/Close Special Gauge, Sunken Scroll (Scroll Doesn't Work)"
+0377dc79 "Y: Get/Remove Sunken Scroll"
+0377dcb6 "RStick In: Open/Close Sunken Scroll"
+0377dd0d "↑↓: Special Gauge, Mini Zapfish"
+0377dd5d "←→: Lives Gauge"
+0377dd89 "LR: Key Amount"
+0377ddac "ZR: Set Power Eggs Randomly"
+0377dde1 "X: Open Lyt (RAINMAKER Ver.)"
+0377de18 "↑↓: Increase/Decrease Number"
+0377df2a "X, Y: Set Message"
+0377df54 "L: Transition"
+0377df73 "R: Header"
+0377df89 "A: Open/Close"
+0377dfa8 "X: Default"
+0377dfc4 "Y: Update Notice"
+0377dff2 "←: Stage"
+0377e010 "→: Fest Notice/Paper/Fest Image"
+0377e04f "L: Fest Images"
+0377e06e "↑: Various News Images"
+0377e098 "ZL: Weapon Release"
+0377e0b2 "ZR: Gear Unlock"
+0377e0cc "↓: Fest Results Announcement"
+0377e125 "When you decide a stage, it'll be cleared"
+0377e16e "This also writes to the Save Data, so if you want to create a save in the middle of playing, please use it."
+0377e24d "ZR, R, A: Open"
+0377e44f "A, X, Y L: Open"
+0377e46b "←→: Type%d"
+0377e486 "A: Advance"
+0377e4a5 "ZL: Hold down to enter, no reward will be displayed."
+0377e4e0 "Y, X: Change Type"
+0377e50b "Y: Fresh!"
+0377e521 "X: Change Cursor Aim State"
+0377e54c "ZL: Aim In/Out"
+0377e56c "A: Enter"
+0377e57f "Y: Exit"
+0377e592 "A, X: Enter/Exit"
+0377e5aa "A, X: Enter/Exit"
+0377e5c3 "A, X: Enter"
+0377e5d9 "X: Enter/Exit"
+0377e79b "This is Debug Text."
+0377e7c3 "X: Open Lyt"
+0377e7e5 "R: Close Lyt"
+0377e807 "A: Next Page"
+0377e826 "Y: Change Speaker Parameter"
+0377e84b "Emotion: %s"
+0377e85c "Narration and the such is displayed randomly. If there is a need to check the messages here, they will be responded to as soon as possible"
+0377e963 "↑↓: Special Gauge"
+0377e996 "Y: Change Color"
+0377ea3b "A: Open (Match)"
+0377ea55 "X: Open (amiibo)"
+0377eb21 "A: Next Message"
+0377eb49 "B: Close Window"
+0377eb71 "LR: Switch Message File"
+0377eba0 "←→: Switch MessagXe Label"
+0377eca5 "X: Open Lyt (Nintendo Presents)"
+0377ecde "Y: Open Lyt (Illustrations)"
+0377ed12 "Y, R, ZL, ZR: Button Glows"
+0377ed36 "↑↓: Y-Reset UI"
+0377ed5d "This is Sub-Debug Text."
+0377ed82 "This is Debug Text."
+0377eda1 "Y: Set Label"
+0377edc0 "↑↓: Open Lyt"
+0377ede7 "Hold X: Open Lyt"
+0377ee0d "↑↓: Increase/Decrease Gauge"
+0377f3ce "A, X, Y: Open/Close Lyt"
+0377f3f9 "X, Y: Open Lyt"
+0377f41e "X, Y: Close Lyt"
+0377f453 "A, X, Y, L, R: Open/Close Lyt"
+0377f484 "A, X: Open Lyt"
+0377f4a9 "X, Y, L: Animation"
+0377f4c5 "R: Switch Type"
+0377f51d "A: Open Lyt, Proceed"
+0377f54e "X: Close Lyt"
+0377f88e "←→: Increase/Decrese Power Eggs and Sardinium"
+0377f8df "↑↓: Increase/Decrease Zapfish"
+0377f91e "←→: Change Stage Number"
+0377f964 "Y: Full Save Data"
+0377f997 "X: Reset Save Data"
+0377f9c4 "X: Open/Close Lyt"
+0377fa20 "Y: Return"
+0377fa42 "A: Select Main Weapon"
+0377fa88 "B: Presses B in Lyt"
+0377fac6 "L: Full Save Data"
+0377fae5 "-: Open Lyt"
+0377fb18 "B: Close Lyt"
+0377fb3a "Y: Open Page 25"
+0377fb91 "X: Force Close Lyt"
+
+// Viewer Scenes Translation [Diam w/ help from newt]
+@enabled
+037771ca "NName,Model,Animation,BoneVisible,TexPattern,Frame,Color,Camera,Resolution,MultiView" 
+037772ef "ZR: Shooting, Automatic Shooting System(Long Press)"
+037772d1 "L: Camera Reset"
+03777180 "ZL: Cursor Mode"
+03777121 "If something is wrong, try deleting App/Content/**/Debug/*Viewer.byml"
+03777111 "All"
+0377a8c8 "If something is wrong, try deleting App/Content/**/Debug/PlayerViewer.byml"
+0377a92b "ZL: Cursor Mode"
+0377a946 "OR: More functions exist under Player"
+0377734b "CColor,Headwear,Clothes,Shoes,Tank,Weapon Name,Sub,Special,CamCorrection,Animation,Resolution,Continuous,MultiView"
+0377aa77 "TType,Animation,Color,Eye,Skin,Hair,Headwear,Clothes,Pants,Shoes,Tank,Weapon,Camera,Resolution,MultiView"
+0377a999 "%s （Sole %s%.1fcm）"
+0377a983 "%s （Hair Trim %s)"
+0377a977 "Type%d"
+
+// Cmn::Def::isDevelopSeq() always returns true
+@enabled
+0009CF44 20008052
+ 
+// Don't initialize Cmn::SoundMic
+@enabled
+001C5BC8 1F2003D5
+ 
+// DbgSetting in Cstm::newScene<Shop::Scene>(sead::Heap*)
+@enabled
+00227200 00008252
+00227210 70474094
+ 
+// DummyMatch in Cstm::newScene<ThanksForShow::Scene>(sead::Heap*)
+@enabled
+00227350 E0FF8152
+00227360 07714094
+ 
+// Dummy out Lp::Sys::cpAssertProduct()
+@enabled
+019A7E14 C0035FD6
+ 
+// Redirect Lp::Utl::Limit::getSceneDbgMixCtrl_Pilot() to Lp::Utl::getCtrl()
+@enabled
+01A661A4 E0031FAA
+01A661A8 1BFFFF17
+ 
+// Force ChangeLanMatchInBoot to always be true
+@enabled
+01243B10 1F2003D5
+01243B14 28008052
+ 
+// Add newScene function for DbgSetting
+@enabled
+01C27E40 20F8E103
+01C27E50 CC722200
+ 
+// Add newScene function for FreeTest
+@enabled
+01C27E58 C8FAE103 
+01C27E68 80702200
+ 
+// Add newScene function for DummyMatch
+@enabled
+01C27E70 D0FAE103
+01C27E80 20732200
