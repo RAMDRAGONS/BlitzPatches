@@ -147,19 +147,11 @@
 0129CCCC E0031F2A
 0129CD2C 20008052
 
-// Game::SeqMgrVersus::SeqMgrVersus()
-// VGoal -> VBall [OatmealDome, ashbinary, DiamCreeper23]
+// Enable VBall and VRocket [OatmealDome, ashbinary, DiamCreeper23]
 @disabled
-0118AE98 44E3FF97
-
-// Game::SeqMgrVersus::SeqMgrVersus()
-// VLift -> VRocket [OatmealDome, ashbinary, DiamCreeper23]
-@disabled
-0118AEE0 70F5FF97
-
-// nn::oe::EnableGamePlayRecording() dummy out [OatmealDome, ashbinary, DiamCreeper23]
-@disabled
-002258A4 1F2003D5
+0118AE98 44E3FF97 // Game::SeqMgrVersus::SeqMgrVersus() VGoal -> VBall
+0118AEE0 70F5FF97 // Game::SeqMgrVersus::SeqMgrVersus() VLift -> VRocket
+002258A4 1F2003D5 // nn::oe::EnableGamePlayRecording() dummy out
 
 // Disable Auto Cam Movement [YoshiCrystal, ashbinary]
 @disabled
