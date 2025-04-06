@@ -1,0 +1,164 @@
+@nsobid-FA3897E0FADDD49C69ED00F23E705B3E
+# Splatoon 2 1.1.0 Pilot Rev 335415/"Build 2"
+
+@flag offset_shift 0x100
+
+//
+// Licensed under GPLv3, see the included LICENSE.txt or visit
+// https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
+//
+//      Do not use these patches in an online environment.
+//      Even for older versions of the game it's likely you'll be flagged and banned.
+//      These patches are solely intended for isolated emuMMC.
+//      Consider this your warning!
+//
+// Special thanks to everyone who has contributed patches to this file.
+//
+
+// DbgSetting English Translation [ultra_mt]
+@enabled
+02E542B5 "Other"
+02E542BF "Msn (Insp.)"
+02E542D4 "VS (Insp.)"
+02E542E0 "Mission (Test)"
+02E542F5 "VS (Test)"
+02E54301 "Misc."
+02E5430B "Main"
+02E54315 "Sub"
+02E5431C "Special"
+02E5432C "Hed"
+02E54336 "Clt"
+02E5433A "Shs"
+02E5433E "Gear Abilities"
+02E5434E "Player"
+02E543D7 "You can use the DebugPad or normal controller."
+02E54414 "[ Moving ]"
+02E5441F "The L-Stick and D-Pad do the same thing."
+02E5444A "Use the D-Pad to move the cursor."
+02E54478 "Hold Y while using the D-Pad as a shortcut for frame selection."
+02E544BE "[ Selecting ]"
+02E544DB "Press A to transition to a scene."
+02E5450C "Press A to select weapons and maps, and return to the left."
+02E54549 "Use Up and Down to change individual settings."
+02E5457A "Press B to return."
+02E5458D "Toggle between human-readable names and file names with R-Stick."
+02E545D0 "Press + to load the selected map in the appropriate scene."
+02E54619 "Press - to load FreeTest."
+02E5463A "Press X to change the scene's mode."
+02E54668 "[+] Load map     [-] FreeTest\n[X] Change mode  [B] Hold for help"
+02E546D6 "[+]'s Mode\n"
+02E546ED "< Map's mode >"
+02E54701 "< Recon >"
+02E547A8 "Gender"
+02E547AF "Hed"
+02E547B3 "Legwear"
+02E547BD "Team"
+02E547D1 "Splatfest"
+02E547DB "Camera (X)"
+02E547ED "Camera (Y)"
+02E547FF "Sqd. Girl"
+02E54809 "Squid Boy"
+02E324C4 "Rival"
+02E54813 "Random"
+02E54820 "Unspecif."
+02E5482D "Bravo"
+02E54833 "No Fest"
+02E5483D "Announced"
+02E5484A "In Prog."
+02E54854 "Results Pend."
+02E5486D "Env"
+02E54874 "Gamemode"
+02E54884 "VS Type"
+02E54894 "Spectator0"
+02E5489F "Spectator1"
+02E548AA "Color (Comm.)"
+02E548BC "30 sec"
+02E548C6 "1 min"
+02E548CD "2 mins"
+02E548D4 "3 mins"
+02E548DB "5 mins"
+02E548E2 "10 mins"
+02E548EC "99 mins"
+02E548F6 "Not Forced"
+02E54906 "Day"
+02E5490A "Aft"
+02E54911 "Eve"
+02E54915 "Turf War"
+02E54922 "Splat Zones"
+02E54932 "Tower Control"
+02E4AAB2 "Rainmaker"
+02E54942 "Gachi Rocket"
+02E54955 "Auto"
+02E5495C "Private"
+02E5496F "League"
+02E54979 "None"
+02DEAB01 "Time"
+02E1D4B0 "Skin"
+02E1D4C6 "Eye"
+02E2D14C "Normal"
+02DC152F "Mission"
+02DB40B3 "Scene"
+02DDB70F "Settings"
+02DBFA0D "Ink Tank"
+02E54F06 "Starting local communication..."
+02E54F34 "Searching for a room..."
+02E54F50 "(Press Y to create a room.)"
+02E54F7E "Creating a room..."
+02E54FA6 "Joining the found room..."
+02E54FCB "Waiting for players..."
+02E54FED "%d player(s) connected"
+02E55004 "Press Y to start."
+02E5501A "Please wait for all players to join."
+02E55042 "Syncing!"
+02E5504C "Loading next scene..."
+02E55194 "Press the A button (host first)."
+02E551D1 "%ds left"
+02E551DD "Preparing..."
+02E551ED "Connected to the Internet!"
+02E5521B "Preparing for matchmaking..."
+
+// Rocket Debug English Translations [Nick27]
+@enabled
+02E1A7B0 "The Rocket lands in: %d"
+02E1A7CE "The Rocket is back in: %d"
+02E1A7EC "The Rocket will explode in: %d"
+
+// Seeker Fix [ultra_mt]
+@enabled
+002D5258 01000014
+
+// Disable Death Zones [ultra_mt]
+@enabled
+00C41480 C0035FD6
+
+// Disable Drowning [ultra_mt]
+@enabled
+00C421A0 C0035FD6
+
+// Be careful about using this patch, as it can easily brick the Customize scene
+// Show cImpossible Gear in Inventory [Pirlo]
+@disabled
+00272754 1F2003D5
+00272BF4 1F2003D5
+
+// Offline Shop [ultra_mt]
+@enabled
+00F1462C 200080D2
+
+// All Gear is Buyable [Pirlo]
+@enabled
+00044A4C 08008052
+00044B98 FFFF1FB9
+
+// RNG Shops [Pirlo]
+@enabled
+000465C4 20008052
+00197D30 06000014
+
+// xlink2::UserInstance::isDebugLogEnable on [DiamCreeper23]
+@enabled
+015583cc 20008052
+
+// God Mode [ultra_mt]
+@enabled
+00B940F4 160080D2
