@@ -162,3 +162,7 @@
 // God Mode [ultra_mt]
 @enabled
 00B940F4 160080D2
+
+// Rainmaker Special Can Shoot [ultra_mt]
+@enabled
+00BB9C3C 0C000014
