@@ -15,26 +15,52 @@
 // Special thanks to everyone who has contributed patches to this file.
 //
 
-// DbgSetting [OatmealDome]
+// Cmn::Def::isDevelopSeq() always returns true
 @enabled
-0009CF44 20008052 
-002272FC 00008252 
-019A7E16 C0035FD6 
-019BBE94 2C000014E5000014 
-019BBEBC 2E0100146B01001424020014 
-019BBEE8 6D02001416000014CF000014 
-019BBF14 18010014550100140E020014
-019BBF40 57020014 
-019BCCE4 04000014E400001402000014E2000014 
-01A661A4 E0031FAA1BFFFF17
-01C27F78 20F8
-01C27F88 CC722200
-0022730C 314740
-01C27F60 28F9
-01C27F70 20732200
+0009CF44 20008052
+ 
+// Don't initialize Cmn::SoundMic
+@enabled
+001C5BC8 1F2003D5
+ 
+// DbgSetting in Cstm::newScene<Shop::Scene>(sead::Heap*)
+@enabled
+00227200 00008252
+00227210 70474094
+ 
+// DummyMatch in Cstm::newScene<ThanksForShow::Scene>(sead::Heap*)
+@enabled
+00227350 E0FF8152
 00227360 07714094
-01C27F48 38F5E103
-01C27F58 80702200
+ 
+// Dummy out Lp::Sys::cpAssertProduct()
+@enabled
+019A7E14 C0035FD6
+ 
+// Redirect Lp::Utl::Limit::getSceneDbgMixCtrl_Pilot() to Lp::Utl::getCtrl()
+@enabled
+01A661A4 E0031FAA
+01A661A8 1BFFFF17
+ 
+// Force ChangeLanMatchInBoot to always be true
+@enabled
+01243B10 1F2003D5
+01243B14 28008052
+ 
+// Add newScene function for DbgSetting
+@enabled
+01C27E40 20F8E103
+01C27E50 CC722200
+ 
+// Add newScene function for FreeTest
+@enabled
+01C27E58 C8FAE103 
+01C27E68 80702200
+ 
+// Add newScene function for DummyMatch
+@enabled
+01C27E70 D0FAE103
+01C27E80 20732200
 
 // DbgSetting English Translation [OatmealDome]
 @enabled
@@ -550,50 +576,3 @@
 0377a999 "%s （Sole %s%.1fcm）"
 0377a983 "%s （Hair Trim %s)"
 0377a977 "Type%d"
-
-// Cmn::Def::isDevelopSeq() always returns true
-@enabled
-0009CF44 20008052
- 
-// Don't initialize Cmn::SoundMic
-@enabled
-001C5BC8 1F2003D5
- 
-// DbgSetting in Cstm::newScene<Shop::Scene>(sead::Heap*)
-@enabled
-00227200 00008252
-00227210 70474094
- 
-// DummyMatch in Cstm::newScene<ThanksForShow::Scene>(sead::Heap*)
-@enabled
-00227350 E0FF8152
-00227360 07714094
- 
-// Dummy out Lp::Sys::cpAssertProduct()
-@enabled
-019A7E14 C0035FD6
- 
-// Redirect Lp::Utl::Limit::getSceneDbgMixCtrl_Pilot() to Lp::Utl::getCtrl()
-@enabled
-01A661A4 E0031FAA
-01A661A8 1BFFFF17
- 
-// Force ChangeLanMatchInBoot to always be true
-@enabled
-01243B10 1F2003D5
-01243B14 28008052
- 
-// Add newScene function for DbgSetting
-@enabled
-01C27E40 20F8E103
-01C27E50 CC722200
- 
-// Add newScene function for FreeTest
-@enabled
-01C27E58 C8FAE103 
-01C27E68 80702200
- 
-// Add newScene function for DummyMatch
-@enabled
-01C27E70 D0FAE103
-01C27E80 20732200
