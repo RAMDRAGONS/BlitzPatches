@@ -576,3 +576,212 @@
 0377a999 "%s （Sole %s%.1fcm）"
 0377a983 "%s （Hair Trim %s)"
 0377a977 "Type%d"
+
+// Jump in Air [Pirlo]
+@enabled
+00E36798 08008052
+00E26E24 19008052
+
+// Anti Slippery Effect (maybe broken) [Pirlo]
+@disabled
+00E41DBC 28008052
+00E41E10 28008052
+00E41E34 28008052
+00E42064 1F0300B9
+00E420A8 7FD60AB9
+00E42170 7FD60AB9
+00E4217C 1F0300B9
+00E42334 7FCE0AB9
+00E423E8 7FCA0AB9
+00E42400 7FD20AB9
+00E4241C 7FCE0AB9
+00E42518 7FCE0AB9
+00E42608 7FDA0AB9
+00E42618 7FDA0AB9
+00E385DC 7FDA0AB9
+00E27B0C 7FDA0AB9
+00E27B2C 7FDA0AB9
+00E27B5C 7FDA0AB9
+00E26410 7FCE0AB9
+00E27B48 1F2003D5
+00E27B4C 1F2003D5
+00E27C48 7FD20AB9
+00E27C4C 1F2003D5
+00E34014 11000014
+00E34230 11000014
+00E41A80 7FE60AB9
+00E41A8C 7FEA0AB9
+00E34270 7FEA0AB9
+
+// Disable Ground Death Planes (Player) [Pirlo]
+@enabled
+00E37168 08008052
+00E35C58 1F2003D5
+
+// Disable Global Deathplanes (Player) [Pirlo]
+@disabled
+00E31CF0 28008052
+
+// AirFall Voice In All Modes [Pirlo]
+@enabled
+00F4D5E8 1F2003D5
+
+// Offline Shops & Murch [Pirlo]
+@enabled
+012FB6A8 20008052
+00F777D8 20008052
+01221A60 20008052
+
+// Illegal Gear in Inventory Allowance [Pirlo]
+// Unsafe if COP000 clothes is owned
+@enabled
+00276654 1F2003D5
+00276328 1F2003D5
+000A4700 20008052C0035FD6
+
+// All Gear In Shops [Pirlo]
+@enabled
+000325C8 08008052
+000318A4 14008052
+000318B4 14008052
+
+// RNG Shops [Pirlo]
+@enabled
+00033990 20008052
+001B0494 06000014
+
+// 60FPS Plaza & StaffRoll [Pirlo]
+@enabled
+000682F4 00008052
+01039DDC E1031F2A
+
+// Departure BGM After LastBoss Defeated [Pirlo]
+@enabled
+001E1DF4 00008052
+001E1F08 00008052
+001E20E4 00008052
+
+// Double Speed Game [Pirlo]
+// conflicts with 60fps staffroll
+@disabled
+000682F4 60008052
+00068324 E1031F2A
+00068BC0 E1031F2A
+000D04B0 E1031F2A
+000D0EB4 E1031F2A
+
+// Player Collides with Bullet-Only Collisions [Pirlo]
+@enabled
+001256B8 1F2003D5
+
+// Player Ignores Invisible Walls [Pirlo]
+@enabled
+00125718 1F2003D5
+
+// Solo Private Battles [Pirlo]
+@enabled
+012A685C 29008052
+01289BCC 29008052
+002032CC 28008052
+001FD2A8 28008052
+012A0C34 20008052
+
+// Silent Infinite Ink [Pirlo]
+@enabled
+00EB0F3C 0B000014
+
+// Weapon In Plaza [Pirlo]
+// runs out of ram, needs disable NPC players
+@disabled
+0034E044 00008052
+00E1AF94 04000014
+00E90AB0 00008052
+00E90E98 00008052
+
+// Mostly Normal Respawn in Coop [Pirlo]
+@enabled
+00E16F04 00008052
+00E1AF58 00008052
+00E1E1EC 00008052
+00F4CAF0 00008052
+00E1DCD8 00008052
+00E1B130 08008052
+
+// Normal Gear in Coop [Pirlo]
+@disabled
+00067D48 00008052
+00187950 00008052
+00187C9C 09008052
+
+// Pause Whenever Pause Is Enabled [Pirlo]
+@enabled
+002D59A8 20008052
+0005FDF0 20008052
+
+// Disable NPC Players [Pirlo]
+@disabled
+00DA4140 00008052
+
+// Disable Plaza Zoom Movement Lock [Pirlo]
+@enabled
+00E22F70 00008052
+
+// Disable Escape Jail Checks (OE) [Pirlo]
+@enabled
+00D735F8 00008052
+
+// Normal Ink Everywhere [Pirlo]
+@disabled
+008CD490 00008052
+0055ECCC 08008052
+
+// Glittery Ink Everywhere [Pirlo]
+@enabled
+008CD490 20008052
+0055ECCC 28008052
+
+// Sparkly Ink (Alpha Only) Everywhere [Pirlo]
+@disabled
+008CD490 40008052
+0055ECCC 48008052
+
+// Slimy Ink (Bravo Only) Everywhere [Pirlo]
+@disabled
+008CD490 60008052
+0055ECCC 68008052
+
+// Sanitized Ink (Bravo Only) Everywhere [Pirlo]
+@disabled
+008CD490 80008052
+0055ECCC 88008052
+
+// Remove Sub Weapon Usage Timer [Pirlo]
+@enabled
+00EC2408 1F2003D5
+00E20390 E0031F2A
+
+// Disable Spawn Barrier Rejection [Pirlo]
+@enabled
+005838C0 00008052
+00A1307C 1F2003D5
+00A1321C 1F2003D5
+00A13228 1F2003D5
+00A133F0 1F2003D5
+00A133FC 1F2003D5
+00BC4570 1F2003D5
+00D275B4 1F2003D5
+00D27694 1F2003D5
+
+// Disable Forced Species [Pirlo]
+// Crashes in OE intro - dont use there
+@enabled
+00197A58 00008052
+00197B30 00008052
+00197BB4 00008052
+00197C94 00008052
+00197D78 00008052
+00197E00 00008052
+
+// Items In Versus [Pirlo]
+@disabled
+0091AF0C 40008052
