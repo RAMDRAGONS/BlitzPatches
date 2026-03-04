@@ -347,3 +347,35 @@
 @enabled
 0078AD38 20008052C0035FD6
 00794A20 00102E1EC0035FD6
+
+// .text:000000000069F514 _ZN4Game18PaintTargetAreaMgr15extractPolygonsERKN4sead7Vector3IfEES5_PS3_iPNS1_9BoundBox3IfEEb
+//
+// extractPolygons iterates all BlockKCol objects in the KDGndCol Manager
+// and calls getSeadKCol() to get the KCollision pointer. If this pointer
+// is NULL (because BlockKCol::load was never called on the block), the
+// code passes NULL to extractPolygon_ -> updatePolygonList -> checkAABB,
+// which dereferences it and crashes.
+//
+// This patch inlines getSeadKCol (which is just LDR X0, [X0, #0x8D0])
+// directly into the caller, freeing a slot for the NULL check. The
+// displaced MOV W8, #0xC is placed before the inlined LDR.
+//
+// Original:
+// .text:69F514  MOV  X0, X27              ; X0 = BlockKCol ptr
+// .text:69F518  BL   BlockKCol::getSeadKCol ; X0 = this[282] (KCollision*)
+// .text:69F51C  MOV  W8, #0xC             ; stride for UMADDL
+//
+// Patched:
+// .text:69F514  MOV  W8, #0xC             ; preload stride for UMADDL
+// .text:69F518  LDR  X0, [X27, #0x8D0]    ; inline getSeadKCol
+// .text:69F51C  CBZ  X0, loc_69F548       ; skip extractPolygon_ if NULL
+//
+// Fix PaintTargetArea NULL KCollision crash on converted fields
+@enabled
+0069F514 e8071e32606b44f9600100b4
+
+// temp stub and nop enemyescape stuff to allow loading 
+@enabled
+0048f07c C0035FD6
+0048e034 C0035FD6
+0048d050 1F2003D5
