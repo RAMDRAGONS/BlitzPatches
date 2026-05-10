@@ -118,3 +118,7 @@
 02C07500 "Preparing..."
 02C07510 "Connected to the Internet!"
 02C0753E "Preparing for matchmaking..."
+
+// LAN DummyMatch [oomi_the_octo]
+@disabled
+00d1cb50 28008052
