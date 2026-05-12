@@ -122,3 +122,60 @@
 // LAN DummyMatch [oomi_the_octo]
 @disabled
 00d1cb50 28008052
+
+// Disable Debug Warning/Error Text [Ro]
+@disabled
+01526E74 09008052
+
+// Disable Debug (D) Dirty Text [Ro]
+@disabled
+0009C15C 09008052
+
+// fullOpen Always Enabled On Boot [Ro]
+@disabled
+00D07920 E803192A
+
+// Breaks news
+// Plaza Always 60fps [Pirlo]
+@disabled
+00B3EC68 2A0080D2
+00B3EC88 290080D2
+00B3ECAC 2A008052
+00B3E548 2A008052
+00B3E590 2A008052
+
+// All Gear is Buyable [Pirlo]
+@disabled
+0003e454 08008052
+0003e5a8 FFE71FB9
+
+// Be careful about using this patch, as it can easily brick the Customize scene
+// Show cImpossible Gear in Inventory [Pirlo]
+@disabled
+0023b060 1F2003D5
+0023b5b4 1F2003D5
+
+// Disable SD Logger [Alex]
+@disabled
+015EC840 1F2003D5
+015ECB58 C0035FD6
+
+// Redirect Shop Scene to "GearUnsetupTest::Scene::Scene" [oomi_the_octo]
+@disabled
+001fa1b0 00008252
+001fa1c0 2da52c94
+
+// Redirect Shop Scene to "UdgwTest::Scene::Scene" [oomi_the_octo]
+@disabled
+001fa1b0 00008252
+001fa1c0 2d3e3094
+
+// Redirect Shop Scene to "UICheck::Scene::Scene" [oomi_the_octo]
+@disabled
+001fa1b0 00008252
+001fa1c0 48b63094
+
+// Signal Unlimiter [oomi_the_octo]
+@disabled
+00a94d20 08008052
+00a94d9c 08008052
