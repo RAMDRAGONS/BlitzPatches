@@ -1,0 +1,20 @@
+@nsobid-1F1C44F29E77B5D6C7AA5A518E72431800000000000000000000000000000000 
+# Splatoon 2 2017/03/24 Proto
+
+@flag offset_shift 0x100
+
+//
+// Licensed under GPLv3, see the included LICENSE.txt or visit
+// https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
+//
+//      Do not use these patches in an online environment.
+//      Even for older versions of the game it's likely you'll be flagged and banned.
+//      These patches are solely intended for isolated emuMMC.
+//      Consider this your warning!
+//
+// Special thanks to everyone who has contributed patches to this file.
+//
+
+// Remove Ink Diving + Map Crash Prevention [YoshiCrystal]
+@enabled
+009C48E4 C0035FD6
