@@ -15,6 +15,21 @@
 // Special thanks to everyone who has contributed patches to this file.
 //
 
+// Fixes an immediate crash on map load when running under emulator.
+// Game::CamouflageChecker::calcResult reads back SAMPLES_PASSED occlusion queries
+// one frame after submitting them, and asserts GameCamouflageChecker.cpp:93/94
+// (mQueryInfo[ cCamouflageType_FriendColor / _EnemyColor ].isBufferEmpty()) when a
+// result has not landed yet. Real hardware always completes those queries within the
+// ~3-5ms the game allows; emulator's submit/readback path cannot, so the assert
+// fires every time. Retail builds compile these asserts out entirely.
+// NOPs the two CBNZ branches into cpAssertNoFmt so an unready frame degrades to a
+// skipped monitor sample instead of aborting, matching retail behaviour.
+//
+// Skip CamouflageChecker Asserts [RAMDRAGONS]
+@enabled
+009E76AC 1F2003D5
+009E76B4 1F2003D5
+
 // DbgSetting English Translation [ultra_mt]
 @enabled
 02C06675 "Other"
@@ -181,11 +196,11 @@
 00a94d9c 08008052
 
 // Infinite Ink [BluCharro]
-@enabled
+@disabled
 00AAD96C 1F2003D5
 
 // Swim Everywhere [BluCharro]
-@enabled
+@disabled
 00A4FDF0 00102E1EC0035FD61F2003D5
 00B33198 7FC200B9
 00B33300 7FC200B9
